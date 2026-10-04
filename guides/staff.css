@@ -1,0 +1,19 @@
+/* Hospital guide presentation. Patient pages retain their existing theme. */
+@media screen {
+:root{--guide-bg:#e9eef5;--guide-ink:#17395c;--guide-muted:#65768a;--guide-line:#dce5ef}
+body,body.process{background:var(--guide-bg);color:var(--guide-ink)}
+.guide-nav{padding:14px 28px;background:white;border-color:var(--guide-line)}
+.guide-nav a:first-child{color:#17395c}.guide-nav .guide-home{border-radius:16px;border:1px solid #dce5ef;color:#17395c}
+.guide-section-nav{gap:8px;background:white}.guide-section-nav a{border-radius:16px;color:#52677b}.guide-section-nav a[aria-current=page]{background:#287ce5;color:white}
+.guide-shell,.process main{max-width:1280px;margin:auto;padding:28px 32px 48px}
+.guide-hero{padding:24px 28px;background:#fff;border:1px solid #dce5ef;border-radius:18px;margin-bottom:22px}
+.guide-hero h1,.process .guide-hero h1{color:#17395c;font-size:30px;font-weight:800}.guide-eyebrow{color:#287ce5}.guide-muted{color:#65768a}
+.guide-search{border:1px solid #dce5ef;border-radius:12px;outline-color:#287ce5}
+.guide-filters button{border-radius:16px;border-color:#dce5ef;color:#52677b;background:#fff}.guide-filters button[aria-pressed=true]{background:#287ce5;color:white}
+.guide-grid{gap:14px}.guide-card{padding:22px;border-radius:15px;border:1px solid #dce5ef;background:#fff;color:#17395c;box-shadow:0 3px 14px #17395c04}.guide-card:hover{background:#f2f8ff;border-color:#b8d5f5}
+.guide-grid>a.guide-card:nth-child(n){background:#fff;border-color:#dce5ef}.guide-grid>a.guide-card:nth-child(2){background:#eaf9f7}.guide-grid>a.guide-card:nth-child(3){background:#f2f8ff}
+.guide-card h2{color:#17395c;font-weight:750}.guide-card p{color:#52677b}.guide-tag{border-radius:16px;background:#f2f8ff;color:#287ce5}.treatment-icon{border-radius:12px;background:#f2f8ff;color:#287ce5}
+.guide-detail{border-radius:18px;border:1px solid #dce5ef;color:#17395c;background:white}.guide-detail header{background:#f2f8ff;border-color:#dce5ef}.guide-detail button{border-radius:16px;background:#17395c;color:#fff}.guide-detail h3{color:#17395c}.guide-detail article{line-height:1.9}.prescription-notice{background:#eaf9f7;border-radius:12px;color:#17395c}
+.process .flip-card-front,.process .flip-card-back{border-radius:15px!important;border-color:#dce5ef}.process .flip-card-back{background:#f2f8ff}.process [class*="rounded-"]{border-radius:15px!important}
+@media(max-width:700px){.guide-shell,.process main{padding:18px 16px 32px}.guide-hero{padding:20px}.guide-hero h1,.process .guide-hero h1{font-size:25px}}
+}

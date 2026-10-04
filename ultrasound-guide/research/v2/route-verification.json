@@ -1,0 +1,242 @@
+[
+  {
+    "route": "#shoulder/1",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#shoulder/2",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#shoulder/3",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#shoulder/4",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#shoulder/5",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#elbow/1",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#elbow/2",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#elbow/3",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#elbow/4",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#elbow/5",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#hand_wrist/1",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#hand_wrist/2",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#hand_wrist/3",
+    "photos": 6,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#hand_wrist/4",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#hand_wrist/5",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#knee/1",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#knee/2",
+    "photos": 6,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#knee/3",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#knee/4",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#knee/5",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#hip/1",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#hip/2",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#hip/3",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#hip/4",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#hip/5",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#ankle/1",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#ankle/2",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#ankle/3",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#ankle/4",
+    "photos": 4,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  },
+  {
+    "route": "#ankle/5",
+    "photos": 5,
+    "checks": 3,
+    "broken": 0,
+    "original": true,
+    "footer": true
+  }
+]

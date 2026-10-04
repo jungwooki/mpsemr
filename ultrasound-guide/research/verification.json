@@ -1,0 +1,13 @@
+{
+  "screenRoutes": 49,
+  "mobileOverflowFailures": 0,
+  "originalSteps": 30,
+  "originalChecks": 90,
+  "terms": 47,
+  "printPages": 75,
+  "missingPrintFooter": [],
+  "printTextOverlap": [],
+  "originalFilesByteIdentical": 7,
+  "recordStateTest": "passed",
+  "searchTest": "passed"
+}

@@ -2,7 +2,7 @@
 window.openHaeonGuide=function(page='index'){
   if(!['index','process','prescription','treatment','diagnostic'].includes(page)) return;
   const dialog=document.getElementById('haeon-guide-dialog');
-  dialog.querySelector('iframe').src='guides/'+page+'.html';
+  dialog.querySelector('iframe').src='guides/'+page+'.html'+(document.body.dataset.audience==='staff'?'?audience=staff':'');
   if(!dialog.open)dialog.showModal();
 };
 document.getElementById('haeon-guide-close').addEventListener('click',()=>document.getElementById('haeon-guide-dialog').close());

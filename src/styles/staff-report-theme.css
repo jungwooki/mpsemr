@@ -1,0 +1,136 @@
+/* Hospital workspace: the mpsgrowth report visual language, scoped by audience. */
+@media screen{
+ body:is([data-audience=staff],[data-audience=staff-locked]){--staff-navy:#17395c;--staff-ink:#243b53;--staff-sub:#52677b;--staff-bg:#e9eef5;--staff-line:#d8e3f0;--staff-blue:#287ce5;--clinical-line:var(--staff-line);--clinical-muted:#61778f;--clinical-blue:var(--staff-blue);--clinical-rail:158px;--emr-blue:var(--staff-blue);--emr-line:var(--staff-line);color:var(--staff-ink);background:var(--staff-bg);font-family:Pretendard,sans-serif}
+ body:is([data-audience=staff],[data-audience=staff-locked]) button,body:is([data-audience=staff],[data-audience=staff-locked]) input,body:is([data-audience=staff],[data-audience=staff-locked]) select,body:is([data-audience=staff],[data-audience=staff-locked]) textarea{font-family:inherit}
+ body:is([data-audience=staff],[data-audience=staff-locked]) :is(button,a,input,select,textarea,summary):focus-visible{outline:2px solid #287ce5;outline-offset:3px}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #gateway-view{background:#e9eef5!important;align-items:stretch}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #gateway-view>div:first-child{background:transparent!important;border-bottom:1px solid #d1dfed}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #gateway-view>div:first-child>div{max-width:1050px;text-align:left;padding:52px 32px 28px}
+ body:is([data-audience=staff],[data-audience=staff-locked]) .mps-certification{justify-content:flex-start;color:#61778f;margin-bottom:22px;font-size:11px}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #entry-title{color:#17395c;font-size:38px;line-height:1.3;margin-bottom:12px}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #entry-subtitle{color:#52677b;font-size:15px}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #gateway-view>div:last-child{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:1050px;width:100%;margin:28px auto 0;padding:0 32px 40px;align-content:start}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #gateway-view .haeon-entry-card{background:#fff!important;border:1px solid transparent!important;border-radius:18px;padding:26px;min-height:210px;margin:0;box-shadow:none!important;color:#17395c;text-align:left;transition:none;transform:none}
+ body[data-audience=staff] #gateway-view .staff-chart-entry{background:#f2f8ff!important;border-color:#bdd9f9!important}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #gateway-view .haeon-entry-card:hover{border-color:#73a9e8!important;background:#f2f8ff!important}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #gateway-view .haeon-entry-icon{background:#e0f0ff;color:#1762b2;border:0;border-radius:13px;width:46px;height:46px}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #gateway-view .haeon-entry-card .text-slate-900{color:#17395c;font-size:24px;margin-bottom:12px}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #gateway-view .haeon-entry-card p{color:#52677b;line-height:1.85;font-size:14px}
+ body[data-audience=staff-locked] #gateway-view>div:last-child{display:block}
+ body[data-audience=staff-locked] .staff-login-only{max-width:600px;margin:0;background:#f2f8ff;border:1px solid #c9def7;border-radius:17px;text-align:left;padding:28px}
+ body[data-audience=staff-locked] .staff-login-only button{width:auto;padding:12px 25px;background:#17395c;border:0;border-radius:8px;font-size:14px;min-height:42px}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #emr-password-dialog{border-color:#d8e3f0!important;border-radius:18px!important;box-shadow:0 20px 70px #17395c26!important}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #emr-password-dialog form{background:#fff!important;padding:28px!important}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #emr-password-dialog :is(h2,.emr-brand,label){color:#17395c}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #emr-password-dialog :is(input,select){border-color:#cdddf0!important;border-radius:8px!important;min-height:44px;background:#f8fafc!important;font-size:14px!important;color:#243b53}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #emr-password-dialog button[type=submit]{background:#17395c!important;border-radius:8px!important}
+ body[data-audience=staff] .clinical-navigation{background:white;border-color:#d8e3f0;padding:22px 9px}
+ body[data-audience=staff] .clinical-navigation nav button{font-size:11px;border-radius:8px;color:#526b84;padding:10px 8px}
+ body[data-audience=staff] .clinical-navigation nav button[aria-current]{background:#eaf4ff;color:#1762b2}
+ body[data-audience=staff] .clinical-brand{color:#17395c;padding-bottom:28px}
+ body[data-audience=staff] .clinical-nav-footer b{color:#17395c}
+ body[data-audience=staff] .clinical-unified-toolbar{background:white;border-color:#d8e3f0;min-height:57px;height:auto;padding:10px 16px;gap:12px;align-items:center}
+ body[data-audience=staff] .clinical-unified-toolbar>strong{font-size:17px;color:#17395c;font-weight:750}
+ body[data-audience=staff] .clinical-unified-toolbar>strong>span{color:#61778f;font-size:12px}
+ body[data-audience=staff] .clinical-unified-toolbar button{font-size:11px;min-height:31px;padding:6px 10px;background:#fff;color:#17395c;border:1px solid #d8e3f0;border-radius:7px}
+ body[data-audience=staff] .clinical-unified-toolbar [data-clinical-action=print]{background:#17395c;border-color:#17395c;color:white}
+ body[data-audience=staff] .clinical-unified-toolbar [data-clinical-action=logout]{color:#71869b}
+ body[data-audience=staff] .clinical-unified-toolbar button:hover{background:#edf6ff}
+ body[data-audience=staff] .clinical-unified-toolbar [data-clinical-action=print]:hover{background:#245780}
+ body[data-audience=staff] .clinical-list-heading,body[data-audience=staff] .clinical-history-heading{min-height:46px;height:auto;padding:13px 14px;background:white;border-color:#d8e3f0;color:#17395c}
+ body[data-audience=staff] :is(.clinical-list-heading h2,.clinical-history-heading h3){font-size:13px!important;color:#17395c;font-weight:750!important}
+ body[data-audience=staff] :is(.clinical-patient-search input,#search-input){border:1px solid #d8e3f0!important;border-radius:8px!important;background:#f8fafc!important;font-size:12px;height:38px;min-height:38px;color:#243b53}
+ body[data-audience=staff] .clinical-patient-search{height:81px;padding:11px 12px;border-color:#d8e3f0}
+ body[data-audience=staff] .clinical-patient-count{font-size:10px;color:#71869b}
+ body[data-audience=staff] :is(#search-results>.clinical-patient-row,.clinical-report .clinical-patient-row){padding:11px 13px;min-height:77px;background:white;border-radius:0!important;border-bottom-color:#e3edf7!important}
+ body[data-audience=staff] :is(#search-results>.clinical-patient-row[aria-current=true],.clinical-report .clinical-patient-row[aria-current=true]){background:#eaf4ff!important;box-shadow:inset 3px 0 #287ce5!important}
+ body[data-audience=staff] :is(#search-results>.clinical-patient-row:hover,.clinical-report .clinical-patient-row:hover){background:#f2f8ff}
+ body[data-audience=staff] :is(#search-results .clinical-patient-title strong,.clinical-report .clinical-patient-title strong){color:#17395c;font-size:13px;font-weight:700}
+ body[data-audience=staff] :is(#search-results .clinical-patient-title time,.clinical-report .clinical-patient-title time){color:#61778f;font-size:10px}
+ body[data-audience=staff] :is(.clinical-patient-meta,.clinical-patient-birth){color:#61778f;font-size:11px}
+ body[data-audience=staff] #patient-detail-panel{background:#e9eef5!important}
+ body[data-audience=staff] .emr-overview{grid-template-rows:auto minmax(0,1fr);grid-template-columns:250px minmax(0,1fr);background:#e9eef5}
+ body[data-audience=staff] .emr-overview-records{background:white;border-color:#d8e3f0}
+ body[data-audience=staff] .clinical-report .report-columns{grid-template-columns:220px 250px minmax(0,1fr);background:#e9eef5}
+ body[data-audience=staff] :is(.clinical-report .emr-patient-rail,.clinical-report .emr-records){background:white;border-color:#d8e3f0}
+ body[data-audience=staff] .clinical-visit{border-color:#e3edf7;background:white}
+ body[data-audience=staff] .clinical-visit>summary{padding:12px 14px;color:#17395c;font-size:12px}
+ body[data-audience=staff] .clinical-visit.current>summary{background:#eaf4ff;color:#1762b2;box-shadow:inset 3px 0 #287ce5}
+ body[data-audience=staff] .clinical-category>summary{background:#f2f8ff;color:#526b84;border-color:#e3edf7;padding:9px 14px}
+ body[data-audience=staff] .clinical-history-record{color:#405b76;font-size:12px}
+ body[data-audience=staff] .clinical-history-record[aria-current=true]{background:#deeeff;color:#1762b2}
+ body[data-audience=staff] .clinical-history-delete{color:#a44b31;border-radius:6px}
+ body[data-audience=staff] .clinical-consultation{padding:12px 16px 35px;background:#e9eef5}
+ body[data-audience=staff] :is(#patient-detail-panel .emr-overview-identity,.clinical-report .clinical-identity){min-height:72px;height:auto;margin:12px 16px!important;padding:16px 18px!important;background:#f8fafc!important;border:0!important;border-radius:15px!important;gap:18px;flex-wrap:wrap}
+ body[data-audience=staff] .clinical-report .clinical-identity{margin:0 0 12px!important}
+ body[data-audience=staff] .clinical-identity h2{color:#17395c;font-size:22px!important;font-weight:780!important}
+ body[data-audience=staff] .clinical-identity-details{gap:18px}
+ body[data-audience=staff] .clinical-identity-details span{font-size:10px;color:#61778f}
+ body[data-audience=staff] .clinical-identity-details b{color:#243b53;font-size:12px}
+ body[data-audience=staff] .emr-overview-prompt{margin:0 16px 16px;border:0;border-radius:15px;background:#f2f8ff;padding:22px;color:#52677b;min-height:150px}
+ body[data-audience=staff] .emr-overview-prompt h2{font-size:17px;color:#17395c;font-weight:750}
+ body[data-audience=staff] .emr-overview-prompt p{color:#52677b;font-size:13px;line-height:1.85}
+ body[data-audience=staff] .clinical-record-fold{border:0;background:transparent}
+ body[data-audience=staff] .clinical-record-toggle{border:0;border-radius:11px;padding:11px 15px;background:#deeeff;color:#1762b2;font-size:12px;margin-bottom:12px}
+ body[data-audience=staff] .clinical-record-toggle time{color:#52677b}
+ body[data-audience=staff] .clinical-report .report-col-right{border:0;border-radius:15px;background:white!important;margin-bottom:14px;overflow:hidden}
+ body[data-audience=staff] .clinical-editor-heading{background:#f2f8ff;padding:16px 18px;border-color:#d8e3f0;align-items:center;flex-direction:row}
+ body[data-audience=staff] .clinical-editor-heading h2{color:#17395c;font-size:17px;font-weight:750}
+ body[data-audience=staff] .clinical-kicker{color:#b5482b;letter-spacing:.13em;font-size:9px}
+ body[data-audience=staff] .clinical-editor-heading>span{color:#61778f;font-size:10px}
+ body[data-audience=staff] .clinical-report .emr-notes{padding:17px;gap:14px;grid-template-columns:1fr 1fr}
+ body[data-audience=staff] .clinical-report .emr-notes>[id$="private-note-slot"]{grid-column:1/-1}
+ body[data-audience=staff] .clinical-report .emr-notes .rp-section-title{color:#17395c;font-size:13px;font-weight:700;margin-bottom:9px}
+ body[data-audience=staff] .clinical-report .emr-notes .rp-section-title span{color:#61778f;font-size:10px}
+ body[data-audience=staff] .clinical-report .emr-notes .rp-section-title svg{color:#1762b2}
+ body[data-audience=staff] .clinical-report .emr-notes textarea{background:#f8fafc!important;border:1px solid #d8e3f0;border-radius:10px;color:#243b53;padding:13px 15px;font-size:13px;line-height:1.85;min-height:145px;resize:vertical}
+ body[data-audience=staff] .clinical-report .emr-notes textarea[id$="private-note"]{height:165px;min-height:165px}
+ body[data-audience=staff] .clinical-report .emr-notes textarea[id$="doctor-note"]{background:#eaf9f7!important;border-color:#cbe7e2}
+ body[data-audience=staff] .clinical-report .emr-notes textarea:focus{border-color:#73a9e8;outline:2px solid #deeeff!important}
+ body[data-audience=staff] .clinical-report .emr-notes button{background:white;color:#17395c;border:1px solid #d8e3f0;border-radius:7px;font-size:11px;min-height:29px;padding:5px 9px}
+ body[data-audience=staff] .clinical-report .emr-plan-tools button{font-size:10px;min-height:24px;padding:3px 6px;background:#eaf4ff;color:#1762b2;border-color:transparent;white-space:nowrap}
+ body[data-audience=staff] .emr-note-copy button{background:#fff;color:#17395c}
+ body[data-audience=staff] .clinical-report .a4-page{background:white;border:0;border-radius:15px;padding:22px;box-shadow:none;color:#243b53}
+ body[data-audience=staff] .clinical-report :is(.rp-title,.rp-section-title){color:#17395c}
+ body[data-audience=staff] .clinical-report .rp-title{font-size:24px;font-weight:780}
+ body[data-audience=staff] .clinical-report .rp-info-bar{background:#f8fafc;border:0;border-radius:14px;padding:14px 10px}
+ body[data-audience=staff] .clinical-report .rp-info-value{color:#165fa7;font-size:15px}
+ body[data-audience=staff] .clinical-report .rp-card{border:1px solid #d8e3f0;border-radius:14px;background:#fff;box-shadow:none}
+ body[data-audience=staff] .clinical-report .rp-soft{background:#f2f8ff}
+ body[data-audience=staff] .clinical-report :is(.rp-chip,.rp-page-badge){border:0!important;border-radius:16px;background:#eaf2ff!important;color:#275ab1!important;padding:5px 9px}
+ body[data-audience=staff] .survey-response-summary{background:#f2f8ff;border:1px solid #bdd7f0;border-radius:14px;padding:18px;margin:16px 18px 18px;color:#243b53;box-shadow:0 3px 12px #17395c08}
+ body[data-audience=staff] .survey-summary-heading h3{color:#17395c;font-size:16px}
+ body[data-audience=staff] .survey-summary-heading>span{background:#e0f0ff;color:#1762b2;border-radius:16px;padding:4px 9px}
+ body[data-audience=staff] .survey-summary-help{color:#61778f;font-size:12px!important;line-height:1.8}
+ body[data-audience=staff] .survey-answer-list{border:1px solid #d8e5f3;border-radius:11px;overflow:hidden;background:white;margin:14px 0 10px}
+ body[data-audience=staff] .survey-answer-list>div{grid-template-columns:minmax(120px,30%) minmax(0,1fr);gap:0;border-color:#d8e5f3;padding:0;min-height:35px}
+ body[data-audience=staff] .survey-answer-list>div:last-child{border-bottom:0}
+ body[data-audience=staff] .survey-answer-list dt{color:#405b76;font-size:12px;font-weight:600;background:#edf4fd;border-right:1px solid #d8e5f3;padding:8px 14px;line-height:1.45;display:flex;align-items:center}
+ body[data-audience=staff] .survey-answer-list dd{color:#243b53;font-size:13px;padding:8px 14px;line-height:1.45;background:white}
+ body[data-audience=staff] .survey-scale-track{height:11px;background:#e2edfb;border-radius:20px}
+ body[data-audience=staff] .survey-scale-fill{border-radius:20px;background:linear-gradient(90deg,#69b5ff,#287ce5)}
+ body[data-audience=staff] .survey-scale-value strong{color:#165fa7;font-size:15px}
+ body[data-audience=staff] .survey-summary-actions button{background:white;color:#17395c;border-color:#d8e3f0;border-radius:7px;padding:7px 11px;font-size:11px}
+ body[data-audience=staff] .plan-picker,body[data-audience=staff] .survey-copy-dialog{border:1px solid #d8e3f0;border-radius:18px;padding:23px;color:#243b53;box-shadow:0 20px 70px #17395c26}
+ body[data-audience=staff] :is(.plan-picker h2,.survey-copy-dialog h2){color:#17395c;font-size:21px}
+ body[data-audience=staff] :is(.plan-picker input,.survey-copy-dialog textarea){border-color:#cdddf0;border-radius:8px;background:#f8fafc;font-size:13px;color:#243b53}
+ body[data-audience=staff] .plan-picker-result{padding:14px 10px;border-color:#e3edf7;border-radius:8px}
+ body[data-audience=staff] .plan-picker-result:hover{background:#f2f8ff}
+ body[data-audience=staff] .plan-picker-result strong{color:#17395c}
+ body[data-audience=staff] .plan-picker-result small{color:#61778f}
+ body[data-audience=staff] .plan-picker-result>span{color:#1762b2;border-radius:16px;background:#e0f0ff;padding:3px 7px}
+ body[data-audience=staff] :is(#haeon-guide-dialog,#main-screen-confirm,#emr-image-preview){border-color:#d8e3f0!important;border-radius:18px!important;color:#17395c}
+ body[data-audience=staff] #haeon-guide-dialog header{background:#f2f8ff;border-color:#d8e3f0!important;padding:14px 20px!important;color:#17395c}
+ body[data-audience=staff] :is(#haeon-guide-dialog header button,.plan-picker header button,.survey-copy-dialog button){border:1px solid #d8e3f0;border-radius:7px!important;background:white!important;color:#17395c!important;padding:7px 11px!important;font-size:12px}
+ body[data-audience=staff] #emr-audit-dialog [data-audit-rows] article{background:#f8fafc;border-color:#d8e3f0;border-radius:10px;color:#405b76}
+ body:is([data-audience=staff],[data-audience=staff-locked]) #app-copyright{color:#71869b;background:#f8fafc;border-color:#d8e3f0}
+}
+@media screen and (max-width:1250px){body[data-audience=staff]{--clinical-rail:140px}body[data-audience=staff] .clinical-report .report-columns{grid-template-columns:190px 218px minmax(0,1fr)}body[data-audience=staff] .emr-overview{grid-template-columns:218px minmax(0,1fr)}body[data-audience=staff] .clinical-report .emr-notes{grid-template-columns:1fr}body[data-audience=staff] .clinical-unified-toolbar button{padding:5px 7px;font-size:10px}}
+@media screen and (max-width:950px){body[data-audience=staff]{--clinical-rail:0px}body[data-audience=staff] .clinical-report .report-columns{grid-template-columns:172px 195px minmax(0,1fr)}body[data-audience=staff] .clinical-editor-heading{align-items:flex-start;flex-direction:column}body[data-audience=staff] .clinical-unified-toolbar{flex-wrap:wrap}}
+@media screen and (max-width:700px){body:is([data-audience=staff],[data-audience=staff-locked]) #gateway-view>div:first-child>div{padding:35px 22px 23px}body:is([data-audience=staff],[data-audience=staff-locked]) #gateway-view>div:last-child{grid-template-columns:1fr;padding:0 20px 32px;gap:12px}body:is([data-audience=staff],[data-audience=staff-locked]) #gateway-view .haeon-entry-card{min-height:175px;padding:22px}body:is([data-audience=staff],[data-audience=staff-locked]) #entry-title{font-size:31px}body[data-audience=staff] .clinical-report .report-columns{display:block}body[data-audience=staff] .emr-overview{display:flex}body[data-audience=staff] .clinical-report .emr-notes{grid-template-columns:1fr}body[data-audience=staff] .clinical-report .emr-notes>[id$="private-note-slot"]{grid-column:auto}body[data-audience=staff] .clinical-identity-details{gap:12px}body[data-audience=staff] .clinical-consultation{padding:12px}body[data-audience=staff] .clinical-report .a4-page{padding:16px}}
+
+@media screen and (min-width:1251px){body[data-audience=staff] .clinic-list-pane{width:220px;flex-basis:220px}}
+@media screen and (min-width:951px) and (max-width:1250px){body[data-audience=staff] .clinic-list-pane{width:190px;flex-basis:190px}}
+@media screen and (min-width:701px) and (max-width:950px){body[data-audience=staff] .clinic-list-pane{width:172px;flex-basis:172px}}
+
+@media screen and (max-width:700px){body[data-audience=staff] .survey-response-summary{margin:12px;padding:14px}body[data-audience=staff] .survey-answer-list>div{grid-template-columns:minmax(100px,34%) minmax(0,1fr)}body[data-audience=staff] .survey-answer-list dt,body[data-audience=staff] .survey-answer-list dd{padding:8px 10px}body[data-audience=staff] .survey-answer-list dd.survey-scale-value{grid-template-columns:45px minmax(30px,1fr);gap:6px}}

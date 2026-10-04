@@ -1,0 +1,1574 @@
+{
+  "shoulder": {
+    "id": "shoulder",
+    "title": "어깨 (Shoulder)",
+    "korTitle": "어깨 관절",
+    "iconChar": "肩",
+    "theme": "blue",
+    "description": "회전근개, 이두근 건, 견봉하 점액낭 평가",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Biceps Tendon",
+        "subtitle": "The Landmark (LHB)",
+        "pos": "Neutral, Supination (팔을 편하게 두고 손바닥이 위로)",
+        "kmPoint": "견전(肩前), 견우(肩髃)",
+        "scan": "Bicipital Groove에서 SAX(단축) 스캔 후 장축으로 전환하여 연속성 확인",
+        "checks": [
+          {
+            "id": "b1",
+            "label": "Effusion (+)",
+            "detail": "Tenosynovitis suspected"
+          },
+          {
+            "id": "b2",
+            "label": "Medial Subluxation",
+            "detail": "Check Transverse Humeral Ligament"
+          },
+          {
+            "id": "b3",
+            "label": "Tendinosis",
+            "detail": "Hypoechoic thickening"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Subscapularis",
+        "subtitle": "Internal Rotator Scan",
+        "pos": "External Rotation (팔꿈치를 붙이고 밖으로 회전)",
+        "kmPoint": "노수(臑兪), 견정(肩貞)",
+        "scan": "이두근건 내측의 견갑하근 부착부 관찰, 외회전 시 건이 팽팽해지는 모습 확인",
+        "checks": [
+          {
+            "id": "s1",
+            "label": "Subscapularis Tear",
+            "detail": "Partial or Full thickness"
+          },
+          {
+            "id": "s2",
+            "label": "Calcific Tendonitis",
+            "detail": "Acoustic shadowing inside"
+          },
+          {
+            "id": "s3",
+            "label": "Bony Irregularity",
+            "detail": "Lesser tuberosity profile"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Supraspinatus",
+        "subtitle": "Critical Zone Assessment",
+        "pos": "Modified Crass (뒷주머니에 손을 넣는 자세)",
+        "kmPoint": "곡원(曲垣), 거골(巨骨)",
+        "scan": "극상근 부착부 1-2cm 지점 집중 관찰. 빗살무늬 패턴의 연속성 체크",
+        "checks": [
+          {
+            "id": "sp1",
+            "label": "Full Thickness Tear",
+            "detail": "SST FTT confirmed"
+          },
+          {
+            "id": "sp2",
+            "label": "Articular Surface Tear",
+            "detail": "Partial thickness tear"
+          },
+          {
+            "id": "sp3",
+            "label": "Cartilage Interface (+)",
+            "detail": "Double cortex sign"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "SASB Bursa & ACJ",
+        "subtitle": "Bursa & Joint Assessment",
+        "pos": "Neutral & Dynamic Abduction (옆으로 들어올리기)",
+        "kmPoint": "견료(肩髎), 견우(肩髃)",
+        "scan": "점액낭 두께 측정 및 AC joint 골극 관찰. 외전 시 견봉 하방 끼임 유무 확인",
+        "checks": [
+          {
+            "id": "sa1",
+            "label": "Subacromial Bursitis",
+            "detail": ">2mm thickened bursa"
+          },
+          {
+            "id": "sa2",
+            "label": "Dynamic Impingement",
+            "detail": "Bunching observed"
+          },
+          {
+            "id": "sa3",
+            "label": "AC Joint Osteophyte",
+            "detail": "OA change"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Infraspinatus",
+        "subtitle": "Posterior View",
+        "pos": "Cross-body (팔을 반대쪽 어깨 위로)",
+        "kmPoint": "천종(天宗), 견외수(肩外兪)",
+        "scan": "후방 관절면(Posterior Joint Line) 및 관절와순(Labrum) 관찰",
+        "checks": [
+          {
+            "id": "i1",
+            "label": "Posterior Labrum Cyst",
+            "detail": "Paralabral cyst"
+          },
+          {
+            "id": "i2",
+            "label": "Joint Effusion",
+            "detail": "Posterior recess fluid"
+          },
+          {
+            "id": "i3",
+            "label": "Infraspinatus Atrophy",
+            "detail": "Muscular fatty change"
+          }
+        ]
+      }
+    ],
+    "htmlSteps": [
+      {
+        "id": 1,
+        "title": "Biceps Tendon",
+        "subtitle": "The Landmark (LHB)",
+        "pos": "Neutral, Supination (팔을 편하게 두고 손바닥이 위로)",
+        "kmPoint": "견전(肩前), 견우(肩髃)",
+        "scan": "Bicipital Groove에서 SAX(단축) 스캔 후 장축으로 전환하여 연속성 확인",
+        "checks": [
+          {
+            "id": "b1",
+            "label": "Effusion (+)",
+            "detail": "Tenosynovitis suspected"
+          },
+          {
+            "id": "b2",
+            "label": "Medial Subluxation",
+            "detail": "Check Transverse Humeral Ligament"
+          },
+          {
+            "id": "b3",
+            "label": "Tendinosis",
+            "detail": "Hypoechoic thickening"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Subscapularis",
+        "subtitle": "Internal Rotator Scan",
+        "pos": "External Rotation (팔꿈치를 붙이고 밖으로 회전)",
+        "kmPoint": "노수(臑兪), 견정(肩貞)",
+        "scan": "이두근건 내측의 견갑하근 부착부 관찰, 외회전 시 건이 팽팽해지는 모습 확인",
+        "checks": [
+          {
+            "id": "s1",
+            "label": "Subscapularis Tear",
+            "detail": "Partial or Full thickness"
+          },
+          {
+            "id": "s2",
+            "label": "Calcific Tendonitis",
+            "detail": "Acoustic shadowing inside"
+          },
+          {
+            "id": "s3",
+            "label": "Bony Irregularity",
+            "detail": "Lesser tuberosity profile"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Supraspinatus",
+        "subtitle": "Critical Zone Assessment",
+        "pos": "Modified Crass (뒷주머니에 손을 넣는 자세)",
+        "kmPoint": "곡원(曲垣), 거골(巨骨)",
+        "scan": "극상근 부착부 1-2cm 지점 집중 관찰. 빗살무늬 패턴의 연속성 체크",
+        "checks": [
+          {
+            "id": "sp1",
+            "label": "Full Thickness Tear",
+            "detail": "SST FTT confirmed"
+          },
+          {
+            "id": "sp2",
+            "label": "Articular Surface Tear",
+            "detail": "Partial thickness tear"
+          },
+          {
+            "id": "sp3",
+            "label": "Cartilage Interface (+)",
+            "detail": "Double cortex sign"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "SASB Bursa & ACJ",
+        "subtitle": "Bursa & Joint Assessment",
+        "pos": "Neutral & Dynamic Abduction (옆으로 들어올리기)",
+        "kmPoint": "견료(肩髎), 견우(肩髃)",
+        "scan": "점액낭 두께 측정 및 AC joint 골극 관찰. 외전 시 견봉 하방 끼임 유무 확인",
+        "checks": [
+          {
+            "id": "sa1",
+            "label": "Subacromial Bursitis",
+            "detail": ">2mm thickened bursa"
+          },
+          {
+            "id": "sa2",
+            "label": "Dynamic Impingement",
+            "detail": "Bunching observed"
+          },
+          {
+            "id": "sa3",
+            "label": "AC Joint Osteophyte",
+            "detail": "OA change"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Infraspinatus",
+        "subtitle": "Posterior View",
+        "pos": "Cross-body (팔을 반대쪽 어깨 위로)",
+        "kmPoint": "천종(天宗), 견외수(肩外兪)",
+        "scan": "후방 관절면(Posterior Joint Line) 및 관절와순(Labrum) 관찰",
+        "checks": [
+          {
+            "id": "i1",
+            "label": "Posterior Labrum Cyst",
+            "detail": "Paralabral cyst"
+          },
+          {
+            "id": "i2",
+            "label": "Joint Effusion",
+            "detail": "Posterior recess fluid"
+          },
+          {
+            "id": "i3",
+            "label": "Infraspinatus Atrophy",
+            "detail": "Muscular fatty change"
+          }
+        ]
+      }
+    ]
+  },
+  "elbow": {
+    "id": "elbow",
+    "title": "팔꿈치 (Elbow)",
+    "korTitle": "팔꿈치 관절",
+    "iconChar": "肘",
+    "theme": "sky",
+    "description": "내/외측 상과염, 주관절 터널, 인대 평가",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Anterior Joint",
+        "subtitle": "Effusion & Distal Biceps",
+        "pos": "Extension & Supination (팔을 펴고 손바닥 위로)",
+        "kmPoint": "척택(LU5), 곡택(PC3)",
+        "scan": "Anterior fat pad lifting 여부로 Joint effusion 확인. 요골두와 소두 관절면 관찰",
+        "checks": [
+          {
+            "id": "e1",
+            "label": "Joint Effusion (+)",
+            "detail": "Sail sign or Fat pad lifting"
+          },
+          {
+            "id": "e2",
+            "label": "Loose Body",
+            "detail": "Intra-articular floating body"
+          },
+          {
+            "id": "e3",
+            "label": "Distal Biceps Tendinosis",
+            "detail": "Insertion point check"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Medial Elbow",
+        "subtitle": "Common Flexor Tendon (CFT)",
+        "pos": "External Rotation & Supination (골퍼 엘보 스캔)",
+        "kmPoint": "소해(HT8), 곡지(LI11)",
+        "scan": "내상과 총굴근건 부착부 장축/단축 관찰. 내측측부인대(UCL) 확인",
+        "checks": [
+          {
+            "id": "m1",
+            "label": "Golfer's Elbow (CFT)",
+            "detail": "Hypoechoic thickening or tear"
+          },
+          {
+            "id": "m2",
+            "label": "UCL Instability",
+            "detail": "Valgus stress dynamic test needed"
+          },
+          {
+            "id": "m3",
+            "label": "Medial Epicondylitis",
+            "detail": "Bony irregularity"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Lateral Elbow",
+        "subtitle": "Common Extensor Tendon (CET)",
+        "pos": "Pronation & Flexion (테니스 엘보 스캔)",
+        "kmPoint": "곡지(LI11), 수삼리(LI10)",
+        "scan": "외상과 위 CET 부착부 관찰. 상완요골근(Brachioradialis)과 경계를 확인",
+        "checks": [
+          {
+            "id": "l1",
+            "label": "Tennis Elbow (CET)",
+            "detail": "High grade partial tear or tendinosis"
+          },
+          {
+            "id": "l2",
+            "label": "Radial Head Subluxation",
+            "detail": "Annular ligament area"
+          },
+          {
+            "id": "l3",
+            "label": "Enthesophyte",
+            "detail": "Chronic traction change"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Posterior Elbow",
+        "subtitle": "Olecranon & Triceps",
+        "pos": "Hyper-flexion (최대한 굽힌 자세)",
+        "kmPoint": "천정(TE10), 주료(LI12)",
+        "scan": "주두 점액낭 삼출액 및 삼두근 건 부착부 확인. 활차 연골 두께 측정",
+        "checks": [
+          {
+            "id": "p1",
+            "label": "Olecranon Bursitis",
+            "detail": "Fluid collection on posterior tip"
+          },
+          {
+            "id": "p2",
+            "label": "Triceps Tendinosis",
+            "detail": "Enthesopathy or calcification"
+          },
+          {
+            "id": "p3",
+            "label": "Trochlear Cartilage Change",
+            "detail": "OA change indication"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Cubital Tunnel",
+        "subtitle": "Ulnar Nerve Assessment",
+        "pos": "Flexion/Extension Dynamic Test",
+        "kmPoint": "소해(SI8), 노수(臑兪)",
+        "scan": "척골신경 단면적(CSA) 측정 및 굴곡 시 신경 탈구 여부 확인",
+        "checks": [
+          {
+            "id": "u1",
+            "label": "Ulnar Nerve Swelling",
+            "detail": "CSA > 10mm² at tunnel"
+          },
+          {
+            "id": "u2",
+            "label": "Nerve Subluxation",
+            "detail": "Dislocation over epicondyle"
+          },
+          {
+            "id": "u3",
+            "label": "Osborne's Ligament",
+            "detail": "Thickened arcuate ligament"
+          }
+        ]
+      }
+    ],
+    "htmlSteps": [
+      {
+        "id": 1,
+        "title": "Anterior Joint",
+        "subtitle": "Effusion & Distal Biceps",
+        "pos": "Extension & Supination (팔을 펴고 손바닥 위로)",
+        "kmPoint": "척택(LU5), 곡택(PC3)",
+        "scan": "Anterior fat pad lifting 여부로 Joint effusion 확인. 요골두(Radial head)와 소두(Capitellum) 관절면 관찰",
+        "checks": [
+          {
+            "id": "e1",
+            "label": "Joint Effusion (+)",
+            "detail": "Sail sign or Fat pad lifting"
+          },
+          {
+            "id": "e2",
+            "label": "Loose Body",
+            "detail": "Intra-articular floating body"
+          },
+          {
+            "id": "e3",
+            "label": "Distal Biceps Tendinosis",
+            "detail": "Insertion point check"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Medial Elbow",
+        "subtitle": "Common Flexor Tendon (CFT)",
+        "pos": "External Rotation & Supination (골퍼 엘보 스캔)",
+        "kmPoint": "소해(HT8), 곡지(LI11)",
+        "scan": "내상과(Medial Epicondyle)에서 시작되는 총굴근건의 부착부 장축/단축 관찰. 내측측부인대(UCL) 확인",
+        "checks": [
+          {
+            "id": "m1",
+            "label": "Golfer's Elbow (CFT)",
+            "detail": "Hypoechoic thickening or tear"
+          },
+          {
+            "id": "m2",
+            "label": "UCL Instability",
+            "detail": "Valgus stress dynamic test needed"
+          },
+          {
+            "id": "m3",
+            "label": "Medial Epicondylitis",
+            "detail": "Bony irregularity"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Lateral Elbow",
+        "subtitle": "Common Extensor Tendon (CET)",
+        "pos": "Pronation & Flexion (테니스 엘보 스캔)",
+        "kmPoint": "곡지(LI11), 수삼리(LI10)",
+        "scan": "외상과(Lateral Epicondyle) 위 CET 부착부 관찰. 상완요골근(Brachioradialis)과 경계를 확인",
+        "checks": [
+          {
+            "id": "l1",
+            "label": "Tennis Elbow (CET)",
+            "detail": "High grade partial tear or tendinosis"
+          },
+          {
+            "id": "l2",
+            "label": "Radial Head Subluxation",
+            "detail": "Annular ligament area"
+          },
+          {
+            "id": "l3",
+            "label": "Enthesophyte",
+            "detail": "Chronic traction change"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Posterior Elbow",
+        "subtitle": "Olecranon & Triceps",
+        "pos": "Hyper-flexion (최대한 굽힌 자세)",
+        "kmPoint": "천정(TE10), 주료(LI12)",
+        "scan": "주두 점액낭(Olecranon bursa) 삼출액 및 삼두근(Triceps) 건 부착부 확인. 활차(Trochlea)의 연골 두께 측정",
+        "checks": [
+          {
+            "id": "p1",
+            "label": "Olecranon Bursitis",
+            "detail": "Fluid collection on posterior tip"
+          },
+          {
+            "id": "p2",
+            "label": "Triceps Tendinosis",
+            "detail": "Enthesopathy or calcification"
+          },
+          {
+            "id": "p3",
+            "label": "Trochlear Cartilage Change",
+            "detail": "OA change indication"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Cubital Tunnel",
+        "subtitle": "Ulnar Nerve Assessment",
+        "pos": "Flexion/Extension Dynamic Test (팔을 굽혔다 폈다 반복)",
+        "kmPoint": "소해(SI8), 노수(臑兪)",
+        "scan": "척골신경(Ulnar nerve)의 단면적(CSA) 측정 및 굴곡 시 신경 탈구(Subluxation) 여부 확인",
+        "checks": [
+          {
+            "id": "u1",
+            "label": "Ulnar Nerve Swelling",
+            "detail": "CSA > 10mm² at tunnel"
+          },
+          {
+            "id": "u2",
+            "label": "Nerve Subluxation",
+            "detail": "Dislocation over epicondyle"
+          },
+          {
+            "id": "u3",
+            "label": "Osborne's Ligament",
+            "detail": "Thickened arcuate ligament"
+          }
+        ]
+      }
+    ]
+  },
+  "hand_wrist": {
+    "id": "hand_wrist",
+    "title": "손 & 손목 (Hand/Wrist)",
+    "korTitle": "손목 및 수부",
+    "iconChar": "手",
+    "theme": "emerald",
+    "description": "손목 터널, 건초염, 결절종, 손가락 관절 평가",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Volar Wrist",
+        "subtitle": "Median Nerve & Carpal Tunnel",
+        "pos": "Supination (손바닥 위로)",
+        "kmPoint": "대릉(PC7), 내관(PC6)",
+        "scan": "수근관 내 정중신경의 CSA 측정(>10-12mm² 시 CTS 의심), 신경의 저에코 변화 및 굴근건 건초염 확인",
+        "checks": [
+          {
+            "id": "v1",
+            "label": "Median Nerve Swelling",
+            "detail": "CSA increased at carpal inlet"
+          },
+          {
+            "id": "v2",
+            "label": "Flexor Tenosynovitis",
+            "detail": "Fluid around FDS/FDP tendons"
+          },
+          {
+            "id": "v3",
+            "label": "Retinaculum Bowing",
+            "detail": "Palmar displacement of flexor retinaculum"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Dorsal Wrist (Radial)",
+        "subtitle": "1st & 2nd Compartments",
+        "pos": "Neutral with Thumb up (손등 측면)",
+        "kmPoint": "양계(LI5), 열결(LU7)",
+        "scan": "제1구획(APL, EPB)의 건초염(De Quervain's) 확인 및 Lister's tubercle 주변 제2구획 관찰",
+        "checks": [
+          {
+            "id": "d1",
+            "label": "De Quervain's Tenosynovitis",
+            "detail": "1st compartment thickening & fluid"
+          },
+          {
+            "id": "d2",
+            "label": "Intersection Syndrome",
+            "detail": "Fluid at 1st/2nd compartment crossing"
+          },
+          {
+            "id": "d3",
+            "label": "Radial Artery Doppler",
+            "detail": "Identify vessel before procedure"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Volar Finger",
+        "subtitle": "Flexor Tendon & A1 Pulley",
+        "pos": "Extension to Flexion (동적 검사)",
+        "kmPoint": "어제(LU10), 노궁(PC8) 주변",
+        "scan": "방아쇠 수지 확인을 위해 A1 활차 비후 측정 및 건의 걸림(Snapping) 현상 동적 관찰",
+        "checks": [
+          {
+            "id": "f1",
+            "label": "A1 Pulley Thickening",
+            "detail": "Thickness > 0.5mm"
+          },
+          {
+            "id": "f2",
+            "label": "Tendon Snapping",
+            "detail": "Dynamic locking during flexion"
+          },
+          {
+            "id": "f3",
+            "label": "Volar Plate Injury",
+            "detail": "PIP joint volar side check"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Finger Joint (Dorsal)",
+        "subtitle": "MCP & PIP Joints",
+        "pos": "Slight Flexion",
+        "kmPoint": "팔사(EX-UE9), 합곡(LI4)",
+        "scan": "류마티스 관절염(RA) 소견 확인을 위한 활액막 증식 및 관절 삼출액, 골 미란(Erosion) 확인",
+        "checks": [
+          {
+            "id": "j1",
+            "label": "Synovial Hypertrophy",
+            "detail": "Hypoechoic tissue in joint space"
+          },
+          {
+            "id": "j2",
+            "label": "Bony Erosion",
+            "detail": "Cortical break at joint margin"
+          },
+          {
+            "id": "j3",
+            "label": "Pannus Hyperemia",
+            "detail": "Power Doppler active signal"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Ulnar Wrist",
+        "subtitle": "TFCC & ECU",
+        "pos": "Pronation to Neutral",
+        "kmPoint": "양곡(SI5), 완골(SI4)",
+        "scan": "삼각섬유연골복합체(TFCC)의 파열 여부 및 제6구획(ECU) 건의 탈구/건초염 확인",
+        "checks": [
+          {
+            "id": "u1",
+            "label": "TFCC Tear",
+            "detail": "Hypoechoic defect at ulnar recess"
+          },
+          {
+            "id": "u2",
+            "label": "ECU Tendinosis/Subluxation",
+            "detail": "6th compartment instability"
+          },
+          {
+            "id": "u3",
+            "label": "DRUJ Instability",
+            "detail": "Distal radioulnar joint gapping"
+          }
+        ]
+      }
+    ],
+    "htmlSteps": [
+      {
+        "id": 1,
+        "title": "Volar Wrist",
+        "subtitle": "Median Nerve & Carpal Tunnel",
+        "pos": "Supination (손바닥 위로)",
+        "kmPoint": "대릉(PC7), 내관(PC6)",
+        "scan": "수근관 내 정중신경의 CSA 측정(>10-12mm² 시 CTS 의심), 신경의 저에코 변화 및 굴근건 건초염 확인",
+        "checks": [
+          {
+            "id": "v1",
+            "label": "Median Nerve Swelling",
+            "detail": "CSA increased at carpal inlet"
+          },
+          {
+            "id": "v2",
+            "label": "Flexor Tenosynovitis",
+            "detail": "Fluid around FDS/FDP tendons"
+          },
+          {
+            "id": "v3",
+            "label": "Retinaculum Bowing",
+            "detail": "Palmar displacement of flexor retinaculum"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Dorsal Wrist (Radial)",
+        "subtitle": "1st & 2nd Compartments",
+        "pos": "Neutral with Thumb up (손등 측면)",
+        "kmPoint": "양계(LI5), 열결(LU7)",
+        "scan": "제1구획(APL, EPB)의 건초염(De Quervain's) 확인 및 Lister's tubercle 주변 제2구획 관찰",
+        "checks": [
+          {
+            "id": "d1",
+            "label": "De Quervain's Tenosynovitis",
+            "detail": "1st compartment thickening & fluid"
+          },
+          {
+            "id": "d2",
+            "label": "Intersection Syndrome",
+            "detail": "Fluid at 1st/2nd compartment crossing"
+          },
+          {
+            "id": "d3",
+            "label": "Radial Artery Doppler",
+            "detail": "Identify vessel before procedure"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Volar Finger",
+        "subtitle": "Flexor Tendon & A1 Pulley",
+        "pos": "Extension to Flexion (동적 검사)",
+        "kmPoint": "어제(LU10), 노궁(PC8) 주변",
+        "scan": "방아쇠 수지 확인을 위해 A1 활차 비후 측정 및 건의 걸림(Snapping) 현상 동적 관찰",
+        "checks": [
+          {
+            "id": "f1",
+            "label": "A1 Pulley Thickening",
+            "detail": "Thickness > 0.5mm"
+          },
+          {
+            "id": "f2",
+            "label": "Tendon Snapping",
+            "detail": "Dynamic locking during flexion"
+          },
+          {
+            "id": "f3",
+            "label": "Volar Plate Injury",
+            "detail": "PIP joint volar side check"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Finger Joint (Dorsal)",
+        "subtitle": "MCP & PIP Joints",
+        "pos": "Slight Flexion",
+        "kmPoint": "팔사(EX-UE9), 합곡(LI4)",
+        "scan": "류마티스 관절염(RA) 소견 확인을 위한 활액막 증식 및 관절 삼출액, 골 미란(Erosion) 확인",
+        "checks": [
+          {
+            "id": "j1",
+            "label": "Synovial Hypertrophy",
+            "detail": "Hypoechoic tissue in joint space"
+          },
+          {
+            "id": "j2",
+            "label": "Bony Erosion",
+            "detail": "Cortical break at joint margin"
+          },
+          {
+            "id": "j3",
+            "label": "Pannus Hyperemia",
+            "detail": "Power Doppler active signal"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Ulnar Wrist",
+        "subtitle": "TFCC & ECU",
+        "pos": "Pronation to Neutral",
+        "kmPoint": "양곡(SI5), 완골(SI4)",
+        "scan": "삼각섬유연골복합체(TFCC)의 파열 여부 및 제6구획(ECU) 건의 탈구/건초염 확인",
+        "checks": [
+          {
+            "id": "u1",
+            "label": "TFCC Tear",
+            "detail": "Hypoechoic defect at ulnar recess"
+          },
+          {
+            "id": "u2",
+            "label": "ECU Tendinosis/Subluxation",
+            "detail": "6th compartment instability"
+          },
+          {
+            "id": "u3",
+            "label": "DRUJ Instability",
+            "detail": "Distal radioulnar joint gapping"
+          }
+        ]
+      }
+    ]
+  },
+  "knee": {
+    "id": "knee",
+    "title": "무릎 (Knee)",
+    "korTitle": "슬관절",
+    "iconChar": "膝",
+    "theme": "indigo",
+    "description": "관절 삼출, 반월상 연골, 측부 인대, 슬개건 평가",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Anterior (Upper)",
+        "subtitle": "Suprapatellar Recess",
+        "pos": "Supine, 30° Flexion (무릎 밑에 베개)",
+        "kmPoint": "학정(鶴頂), 양구(梁丘), 혈해(SP10)",
+        "scan": "대퇴사두근 건(Quad Tendon) 하방의 Suprapatellar bursa 확인. 삼출액 저류 시 무릎 관절염 강력 시사",
+        "checks": [
+          {
+            "id": "k1",
+            "label": "Joint Effusion (+)",
+            "detail": "Anechoic fluid in bursa"
+          },
+          {
+            "id": "k2",
+            "label": "Synovial Thickening",
+            "detail": "Active synovitis suspected"
+          },
+          {
+            "id": "k3",
+            "label": "Quad Tendinosis",
+            "detail": "Fibrillar pattern loss"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Anterior (Lower)",
+        "subtitle": "Patellar Tendon & Hoffa's Pad",
+        "pos": "Supine, 30-90° Flexion (굴곡 시 건이 팽팽해짐)",
+        "kmPoint": "독비(犢鼻), 내슬안(內膝眼)",
+        "scan": "슬개건(Patellar Tendon) 장축 스캔. Hoffa's fat pad 내의 저에코 변화 및 부종 확인",
+        "checks": [
+          {
+            "id": "k4",
+            "label": "Jumper's Knee",
+            "detail": "Proximal patellar tendinopathy"
+          },
+          {
+            "id": "k5",
+            "label": "Hoffa's Fat Pad Edema",
+            "detail": "Increased vascularity in pad"
+          },
+          {
+            "id": "k6",
+            "label": "Osgood-Schlatter",
+            "detail": "Tibial tuberosity irregularity"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Medial Side",
+        "subtitle": "MCL & Medial Meniscus",
+        "pos": "Neutral or External Rotation (개구리 다리 자세)",
+        "kmPoint": "음릉천(陰陵泉), 곡천(LR8)",
+        "scan": "내측측부인대(MCL)의 전장 스캔 및 내측 반월상 연골(MM)의 돌출(Extrusion) 여부 관찰",
+        "checks": [
+          {
+            "id": "k7",
+            "label": "MCL Sprain/Tear",
+            "detail": "Ligament thickening or gap"
+          },
+          {
+            "id": "k8",
+            "label": "Medial Meniscal Bulging",
+            "detail": "Extrusion > 3mm"
+          },
+          {
+            "id": "k9",
+            "label": "Pes Anserinus Bursitis",
+            "detail": "Fluid at S-G-T attachment"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Lateral Side",
+        "subtitle": "LCL & IT Band",
+        "pos": "Figure-4 Position (4자 다리 자세)",
+        "kmPoint": "양릉천(GB34), 슬양관(GB33)",
+        "scan": "장경인대(ITB)와 외측측부인대(LCL, Cord-like) 확인. 비골두(Fibular head) 부착부 관찰",
+        "checks": [
+          {
+            "id": "k10",
+            "label": "ITB Syndrome",
+            "detail": "Fluid deep to IT band"
+          },
+          {
+            "id": "k11",
+            "label": "LCL Tear",
+            "detail": "Cord-like structure discontinuity"
+          },
+          {
+            "id": "k12",
+            "label": "Lateral Meniscal Cyst",
+            "detail": "Cystic lesion near joint line"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Posterior",
+        "subtitle": "Popliteal Fossa",
+        "pos": "Prone (엎드린 자세)",
+        "kmPoint": "위중(BL40), 위양(BL39)",
+        "scan": "반막양근-내측비복근 사이의 Baker's cyst 유무 확인. 슬와동맥 및 경골신경 주행 관찰",
+        "checks": [
+          {
+            "id": "k13",
+            "label": "Baker's Cyst",
+            "detail": "Comma-shaped cyst observed"
+          },
+          {
+            "id": "k14",
+            "label": "PCL Injury",
+            "detail": "Deep posterior ligament check"
+          },
+          {
+            "id": "k15",
+            "label": "Popliteal Artery Calcification",
+            "detail": "Vascular screening"
+          }
+        ]
+      }
+    ],
+    "htmlSteps": [
+      {
+        "id": 1,
+        "title": "Anterior (Upper)",
+        "subtitle": "Suprapatellar Recess",
+        "pos": "Supine, 30° Flexion (무릎 밑에 베개)",
+        "kmPoint": "학정(鶴頂), 양구(梁丘), 혈해(SP10)",
+        "scan": "대퇴사두근 건(Quad Tendon) 하방의 Suprapatellar bursa 확인. 삼출액 저류 시 무릎 관절염 강력 시사",
+        "checks": [
+          {
+            "id": "k1",
+            "label": "Joint Effusion (+)",
+            "detail": "Anechoic fluid in bursa"
+          },
+          {
+            "id": "k2",
+            "label": "Synovial Thickening",
+            "detail": "Active synovitis suspected"
+          },
+          {
+            "id": "k3",
+            "label": "Quad Tendinosis",
+            "detail": "Fibrillar pattern loss"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Anterior (Lower)",
+        "subtitle": "Patellar Tendon & Hoffa's Pad",
+        "pos": "Supine, 30-90° Flexion (굴곡 시 건이 팽팽해짐)",
+        "kmPoint": "독비(犢鼻), 내슬안(內膝眼)",
+        "scan": "슬개건(Patellar Tendon) 장축 스캔. Hoffa's fat pad 내의 저에코 변화 및 부종 확인",
+        "checks": [
+          {
+            "id": "k4",
+            "label": "Jumper's Knee",
+            "detail": "Proximal patellar tendinopathy"
+          },
+          {
+            "id": "k5",
+            "label": "Hoffa's Fat Pad Edema",
+            "detail": "Increased vascularity in pad"
+          },
+          {
+            "id": "k6",
+            "label": "Osgood-Schlatter",
+            "detail": "Tibial tuberosity irregularity"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Medial Side",
+        "subtitle": "MCL & Medial Meniscus",
+        "pos": "Neutral or External Rotation (개구리 다리 자세)",
+        "kmPoint": "음릉천(陰陵泉), 곡천(LR8)",
+        "scan": "내측측부인대(MCL)의 전장 스캔 및 내측 반월상 연골(MM)의 돌출(Extrusion) 여부 관찰",
+        "checks": [
+          {
+            "id": "k7",
+            "label": "MCL Sprain/Tear",
+            "detail": "Ligament thickening or gap"
+          },
+          {
+            "id": "k8",
+            "label": "Medial Meniscal Bulging",
+            "detail": "Extrusion > 3mm"
+          },
+          {
+            "id": "k9",
+            "label": "Pes Anserinus Bursitis",
+            "detail": "Fluid at S-G-T attachment"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Lateral Side",
+        "subtitle": "LCL & IT Band",
+        "pos": "Figure-4 Position (4자 다리 자세)",
+        "kmPoint": "양릉천(GB34), 슬양관(GB33)",
+        "scan": "장경인대(ITB)와 외측측부인대(LCL, Cord-like) 확인. 비골두(Fibular head) 부착부 관찰",
+        "checks": [
+          {
+            "id": "k10",
+            "label": "ITB Syndrome",
+            "detail": "Fluid deep to IT band"
+          },
+          {
+            "id": "k11",
+            "label": "LCL Tear",
+            "detail": "Cord-like structure discontinuity"
+          },
+          {
+            "id": "k12",
+            "label": "Lateral Meniscal Cyst",
+            "detail": "Cystic lesion near joint line"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Posterior",
+        "subtitle": "Popliteal Fossa",
+        "pos": "Prone (엎드린 자세)",
+        "kmPoint": "위중(BL40), 위양(BL39)",
+        "scan": "반막양근-내측비복근 사이의 Baker's cyst 유무 확인. 슬와동맥 및 경골신경 주행 관찰",
+        "checks": [
+          {
+            "id": "k13",
+            "label": "Baker's Cyst",
+            "detail": "Comma-shaped cyst observed"
+          },
+          {
+            "id": "k14",
+            "label": "PCL Injury",
+            "detail": "Deep posterior ligament check"
+          },
+          {
+            "id": "k15",
+            "label": "Popliteal Artery Calcification",
+            "detail": "Vascular screening"
+          }
+        ]
+      }
+    ]
+  },
+  "hip": {
+    "id": "hip",
+    "title": "골반 (Hip)",
+    "korTitle": "고관절 및 골반",
+    "iconChar": "股",
+    "theme": "amber",
+    "description": "고관절 삼출, 점액낭염, 서혜부 통증 평가",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Anterior Joint",
+        "subtitle": "Effusion & Labrum",
+        "pos": "Supine, Neutral to Ext. Rotation",
+        "kmPoint": "髀關(ST31)",
+        "scan": "Femoral head-neck junction에서 전방 관절낭 두께 측정. Labrum의 고에코 삼각 형상 확인",
+        "checks": [
+          {
+            "id": "h1",
+            "label": "Joint Effusion (>7mm)",
+            "detail": "Capsular distension noted"
+          },
+          {
+            "id": "h2",
+            "label": "Labral Tear",
+            "detail": "Hypoechoic cleft or paralabral cyst"
+          },
+          {
+            "id": "h3",
+            "label": "FAI (Cam type)",
+            "detail": "Bony bump at head-neck junction"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Anterior Soft Tissue",
+        "subtitle": "Iliopsoas & AIIS",
+        "pos": "Supine, Dynamic Flexion (Snap Hip Test)",
+        "kmPoint": "氣衝(ST30) 주변",
+        "scan": "장요근건(Iliopsoas tendon)의 장축 관찰. AIIS 하방의 대퇴직근(Rectus femoris) 부착부 확인",
+        "checks": [
+          {
+            "id": "h4",
+            "label": "Iliopsoas Bursitis",
+            "detail": "Fluid collection deep to tendon"
+          },
+          {
+            "id": "h5",
+            "label": "Snapping Iliopsoas",
+            "detail": "Abnormal tendon flick during motion"
+          },
+          {
+            "id": "h6",
+            "label": "Rectus Femoris Injury",
+            "detail": "AIIS avulsion or tendinosis"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Lateral Hip",
+        "subtitle": "GTPS & Gluteus Tendons",
+        "pos": "Lateral Decubitus (옆으로 누운 자세)",
+        "kmPoint": "環跳(GB30), 居髎(GB29)",
+        "scan": "대전통증증후군(GTPS) 확인. 중둔근(Gluteus medius) 및 소둔근 건의 부착부 스캔",
+        "checks": [
+          {
+            "id": "h7",
+            "label": "Trochanteric Bursitis",
+            "detail": "Fluid over Greater Trochanter"
+          },
+          {
+            "id": "h8",
+            "label": "Gluteus Medius Tear",
+            "detail": "Discontinuity at facet attachment"
+          },
+          {
+            "id": "h9",
+            "label": "ITB Thickening",
+            "detail": "Tension at lateral hip"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Medial Side",
+        "subtitle": "Adductor Tendons",
+        "pos": "Frog-leg Position (개구리 다리 자세)",
+        "kmPoint": "陰廉(LR11), 足五里(LR10)",
+        "scan": "장내전근(Adductor longus) 부착부 및 치골(Pubis) 주변부 관찰. Groin pain 원인 감별",
+        "checks": [
+          {
+            "id": "h10",
+            "label": "Adductor Strain",
+            "detail": "Tendon thickening or fluid"
+          },
+          {
+            "id": "h11",
+            "label": "Sports Hernia",
+            "detail": "Pain at pubic symphysis area"
+          },
+          {
+            "id": "h12",
+            "label": "Obturator Nerve",
+            "detail": "Check for entrapment points"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Posterior Hip",
+        "subtitle": "Hamstring & Sciatic Nerve",
+        "pos": "Prone (엎드린 자세)",
+        "kmPoint": "承扶(BL36), 殷門(BL37)",
+        "scan": "좌골결절(Ischial tuberosity)의 햄스트링 기시부 관찰. 이상근 하방의 좌골신경 CSA 측정",
+        "checks": [
+          {
+            "id": "h13",
+            "label": "Hamstring Tendinopathy",
+            "detail": "Tear or thickening at origin"
+          },
+          {
+            "id": "h14",
+            "label": "Piriformis Syndrome",
+            "detail": "Nerve entrapment beneath muscle"
+          },
+          {
+            "id": "h15",
+            "label": "Ischiofemoral Impingement",
+            "detail": "Narrowing of space with QF edema"
+          }
+        ]
+      }
+    ],
+    "htmlSteps": [
+      {
+        "id": 1,
+        "title": "Anterior Joint",
+        "subtitle": "Effusion & Labrum",
+        "pos": "Supine, Neutral to Ext. Rotation",
+        "kmPoint": "髀關(ST31)",
+        "scan": "Femoral head-neck junction에서 전방 관절낭 두께 측정. Labrum의 고에코 삼각 형상 확인",
+        "checks": [
+          {
+            "id": "h1",
+            "label": "Joint Effusion (>7mm)",
+            "detail": "Capsular distension noted"
+          },
+          {
+            "id": "h2",
+            "label": "Labral Tear",
+            "detail": "Hypoechoic cleft or paralabral cyst"
+          },
+          {
+            "id": "h3",
+            "label": "FAI (Cam type)",
+            "detail": "Bony bump at head-neck junction"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Anterior Soft Tissue",
+        "subtitle": "Iliopsoas & AIIS",
+        "pos": "Supine, Dynamic Flexion (Snap Hip Test)",
+        "kmPoint": "氣衝(ST30) 주변",
+        "scan": "장요근건(Iliopsoas tendon)의 장축 관찰. AIIS 하방의 대퇴직근(Rectus femoris) 부착부 확인",
+        "checks": [
+          {
+            "id": "h4",
+            "label": "Iliopsoas Bursitis",
+            "detail": "Fluid collection deep to tendon"
+          },
+          {
+            "id": "h5",
+            "label": "Snapping Iliopsoas",
+            "detail": "Abnormal tendon flick during motion"
+          },
+          {
+            "id": "h6",
+            "label": "Rectus Femoris Injury",
+            "detail": "AIIS avulsion or tendinosis"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Lateral Hip",
+        "subtitle": "GTPS & Gluteus Tendons",
+        "pos": "Lateral Decubitus (옆으로 누운 자세)",
+        "kmPoint": "環跳(GB30), 居髎(GB29)",
+        "scan": "대전통증증후군(GTPS) 확인. 중둔근(Gluteus medius) 및 소둔근 건의 부착부 스캔",
+        "checks": [
+          {
+            "id": "h7",
+            "label": "Trochanteric Bursitis",
+            "detail": "Fluid over Greater Trochanter"
+          },
+          {
+            "id": "h8",
+            "label": "Gluteus Medius Tear",
+            "detail": "Discontinuity at facet attachment"
+          },
+          {
+            "id": "h9",
+            "label": "ITB Thickening",
+            "detail": "Tension at lateral hip"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Medial Side",
+        "subtitle": "Adductor Tendons",
+        "pos": "Frog-leg Position (개구리 다리 자세)",
+        "kmPoint": "陰廉(LR11), 足五里(LR10)",
+        "scan": "장내전근(Adductor longus) 부착부 및 치골(Pubis) 주변부 관찰. Groin pain 원인 감별",
+        "checks": [
+          {
+            "id": "h10",
+            "label": "Adductor Strain",
+            "detail": "Tendon thickening or fluid"
+          },
+          {
+            "id": "h11",
+            "label": "Sports Hernia",
+            "detail": "Pain at pubic symphysis area"
+          },
+          {
+            "id": "h12",
+            "label": "Obturator Nerve",
+            "detail": "Check for entrapment points"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Posterior Hip",
+        "subtitle": "Hamstring & Sciatic Nerve",
+        "pos": "Prone (엎드린 자세)",
+        "kmPoint": "承扶(BL36), 殷門(BL37)",
+        "scan": "좌골결절(Ischial tuberosity)의 햄스트링 기시부 관찰. 이상근 하방의 좌골신경 CSA 측정",
+        "checks": [
+          {
+            "id": "h13",
+            "label": "Hamstring Tendinopathy",
+            "detail": "Tear or thickening at origin"
+          },
+          {
+            "id": "h14",
+            "label": "Piriformis Syndrome",
+            "detail": "Nerve entrapment beneath muscle"
+          },
+          {
+            "id": "h15",
+            "label": "Ischiofemoral Impingement",
+            "detail": "Narrowing of space with QF edema"
+          }
+        ]
+      }
+    ]
+  },
+  "ankle": {
+    "id": "ankle",
+    "title": "발목 (Ankle)",
+    "korTitle": "족관절 및 족부",
+    "iconChar": "足",
+    "theme": "rose",
+    "description": "인대 손상(ATFL), 아킬레스 건, 족저근막염 평가",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Anterior Ankle",
+        "subtitle": "Joint & Anterior Tendons",
+        "pos": "Supine, Mild Plantar Flexion",
+        "kmPoint": "解谿(ST41), 中封(LR4)",
+        "scan": "Tibial margin-Talus neck 사이 삼출액 확인. TA, EHL, EDL 건의 활액막염 및 상방 신근지대 관찰",
+        "checks": [
+          {
+            "id": "a1",
+            "label": "Anterior Joint Effusion",
+            "detail": "Anechoic fluid in talocrural joint"
+          },
+          {
+            "id": "a2",
+            "label": "Tibialis Ant. Tenosynovitis",
+            "detail": "Fluid around TA tendon"
+          },
+          {
+            "id": "a3",
+            "label": "Anterior Impingement",
+            "detail": "Bony spur at distal tibia/talus"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Lateral Ankle",
+        "subtitle": "ATFL & CFL (Sprain focus)",
+        "pos": "Inversion Stress (다리를 안으로 꺾는 자세)",
+        "kmPoint": "丘墟(GB40), 崑崙(BL60)",
+        "scan": "ATFL(전거비인대)과 CFL(종비인대)의 연속성 확인. 전방 전위(Anterior Drawer) 동적 검사 병행",
+        "checks": [
+          {
+            "id": "a4",
+            "label": "ATFL Tear (Grade II/III)",
+            "detail": "Ligament discontinuity or thickening"
+          },
+          {
+            "id": "a5",
+            "label": "CFL Injury",
+            "detail": "Deep to peroneal tendons check"
+          },
+          {
+            "id": "a6",
+            "label": "Peroneal Tenosynovitis",
+            "detail": "Fluid in lateral compartment"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Medial Ankle",
+        "subtitle": "Deltoid & Tarsal Tunnel",
+        "pos": "Eversion & External Rotation",
+        "kmPoint": "太谿(KI3), 商丘(SP5)",
+        "scan": "삼각인대(Deltoid) 복합체 관찰. 후경골근(TP), 장지굴근(FDL), 후경골동맥 및 신경(Tarsal tunnel) 스캔",
+        "checks": [
+          {
+            "id": "a7",
+            "label": "Deltoid Ligament Sprain",
+            "detail": "Medial stabilizer check"
+          },
+          {
+            "id": "a8",
+            "label": "Posterior Tibial Tendinosis",
+            "detail": "Medial arch supporter check"
+          },
+          {
+            "id": "a9",
+            "label": "Tarsal Tunnel Syndrome",
+            "detail": "Tibial nerve compression/swelling"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Posterior Ankle",
+        "subtitle": "Achilles Tendon",
+        "pos": "Prone, Feet over edge (엎드린 자세)",
+        "kmPoint": "崑崙(BL60), 太谿(KI3)",
+        "scan": "아킬레스건 전장 스캔. 종골 부착부(Insertion) 및 Kager's fat pad, 후종골 점액낭 관찰",
+        "checks": [
+          {
+            "id": "a10",
+            "label": "Achilles Tendinopathy",
+            "detail": "Fusiform thickening (>6mm)"
+          },
+          {
+            "id": "a11",
+            "label": "Retrocalcaneal Bursitis",
+            "detail": "Fluid in bursa near insertion"
+          },
+          {
+            "id": "a12",
+            "label": "Paratenonitis",
+            "detail": "Inflammation around tendon margin"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Plantar Surface",
+        "subtitle": "Plantar Fascia",
+        "pos": "Prone, Dorsiflexion (발가락을 위로 꺾음)",
+        "kmPoint": "湧泉(KI1), 失眠(Extra)",
+        "scan": "족저근막(Plantar fascia) 기시부 두께 측정(>4mm 시 근막염 시사). 종골 극(Calcaneal spur) 확인",
+        "checks": [
+          {
+            "id": "a13",
+            "label": "Plantar Fasciitis",
+            "detail": "Thickness > 4.5mm & hypoechoic"
+          },
+          {
+            "id": "a14",
+            "label": "Plantar Fascia Tear",
+            "detail": "Partial defect or perifascial fluid"
+          },
+          {
+            "id": "a15",
+            "label": "Calcaneal Spur (+)",
+            "detail": "Enthesophyte at medial tubercle"
+          }
+        ]
+      }
+    ],
+    "htmlSteps": [
+      {
+        "id": 1,
+        "title": "Anterior Ankle",
+        "subtitle": "Joint & Anterior Tendons",
+        "pos": "Supine, Mild Plantar Flexion",
+        "kmPoint": "解谿(ST41), 中封(LR4)",
+        "scan": "Tibial margin-Talus neck 사이 삼출액 확인. TA, EHL, EDL 건의 활액막염 및 상방 신근지대 관찰",
+        "checks": [
+          {
+            "id": "a1",
+            "label": "Anterior Joint Effusion",
+            "detail": "Anechoic fluid in talocrural joint"
+          },
+          {
+            "id": "a2",
+            "label": "Tibialis Ant. Tenosynovitis",
+            "detail": "Fluid around TA tendon"
+          },
+          {
+            "id": "a3",
+            "label": "Anterior Impingement",
+            "detail": "Bony spur at distal tibia/talus"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Lateral Ankle",
+        "subtitle": "ATFL & CFL (Sprain focus)",
+        "pos": "Inversion Stress (다리를 안으로 꺾는 자세)",
+        "kmPoint": "丘墟(GB40), 崑崙(BL60)",
+        "scan": "ATFL(전거비인대)과 CFL(종비인대)의 연속성 확인. 전방 전위(Anterior Drawer) 동적 검사 병행",
+        "checks": [
+          {
+            "id": "a4",
+            "label": "ATFL Tear (Grade II/III)",
+            "detail": "Ligament discontinuity or thickening"
+          },
+          {
+            "id": "a5",
+            "label": "CFL Injury",
+            "detail": "Deep to peroneal tendons check"
+          },
+          {
+            "id": "a6",
+            "label": "Peroneal Tenosynovitis",
+            "detail": "Fluid in lateral compartment"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Medial Ankle",
+        "subtitle": "Deltoid & Tarsal Tunnel",
+        "pos": "Eversion & External Rotation",
+        "kmPoint": "太谿(KI3), 商丘(SP5)",
+        "scan": "삼각인대(Deltoid) 복합체 관찰. 후경골근(TP), 장지굴근(FDL), 후경골동맥 및 신경(Tarsal tunnel) 스캔",
+        "checks": [
+          {
+            "id": "a7",
+            "label": "Deltoid Ligament Sprain",
+            "detail": "Medial stabilizer check"
+          },
+          {
+            "id": "a8",
+            "label": "Posterior Tibial Tendinosis",
+            "detail": "Medial arch supporter check"
+          },
+          {
+            "id": "a9",
+            "label": "Tarsal Tunnel Syndrome",
+            "detail": "Tibial nerve compression/swelling"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Posterior Ankle",
+        "subtitle": "Achilles Tendon",
+        "pos": "Prone, Feet over edge (엎드린 자세)",
+        "kmPoint": "崑崙(BL60), 太谿(KI3)",
+        "scan": "아킬레스건 전장 스캔. 종골 부착부(Insertion) 및 Kager's fat pad, 후종골 점액낭 관찰",
+        "checks": [
+          {
+            "id": "a10",
+            "label": "Achilles Tendinopathy",
+            "detail": "Fusiform thickening (>6mm)"
+          },
+          {
+            "id": "a11",
+            "label": "Retrocalcaneal Bursitis",
+            "detail": "Fluid in bursa near insertion"
+          },
+          {
+            "id": "a12",
+            "label": "Paratenonitis",
+            "detail": "Inflammation around tendon margin"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Plantar Surface",
+        "subtitle": "Plantar Fascia",
+        "pos": "Prone, Dorsiflexion (발가락을 위로 꺾음)",
+        "kmPoint": "湧泉(KI1), 失眠(Extra)",
+        "scan": "족저근막(Plantar fascia) 기시부 두께 측정(>4mm 시 근막염 시사). 종골 극(Calcaneal spur) 확인",
+        "checks": [
+          {
+            "id": "a13",
+            "label": "Plantar Fasciitis",
+            "detail": "Thickness > 4.5mm & hypoechoic"
+          },
+          {
+            "id": "a14",
+            "label": "Plantar Fascia Tear",
+            "detail": "Partial defect or perifascial fluid"
+          },
+          {
+            "id": "a15",
+            "label": "Calcaneal Spur (+)",
+            "detail": "Enthesophyte at medial tubercle"
+          }
+        ]
+      }
+    ]
+  }
+}

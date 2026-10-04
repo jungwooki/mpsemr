@@ -1,0 +1,72 @@
+{
+  "modals": 60,
+  "errors": [],
+  "growth": [
+    {
+      "route": "ruf",
+      "title": "성장판 초음파 · 9장 촬영 가이드",
+      "cta": "#ruf/1",
+      "photos": 4,
+      "broken": 0,
+      "footer": true
+    },
+    {
+      "route": "ruf/1",
+      "title": "척골 원위부 · 3장 촬영",
+      "cta": "#ruf/1",
+      "photos": 2,
+      "broken": 0,
+      "footer": true
+    },
+    {
+      "route": "ruf/2",
+      "title": "요골 원위부 · 3장 촬영",
+      "cta": "#ruf/1",
+      "photos": 2,
+      "broken": 0,
+      "footer": true
+    },
+    {
+      "route": "ruf/3",
+      "title": "대퇴골 원위부 · 3장 촬영",
+      "cta": "#ruf/1",
+      "photos": 2,
+      "broken": 0,
+      "footer": true
+    }
+  ],
+  "external": [
+    {
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "functional": {
+    "modalMobileOverflow": false,
+    "focusReturned": true,
+    "rufMobileOverflow": false,
+    "print": {
+      "calls": 1,
+      "ulna": true,
+      "radius": true,
+      "femur": true,
+      "images": 10
+    },
+    "recordRetained": "판단 유보",
+    "clinicalSearch": 1,
+    "files": 9,
+    "noRemovedUI": true
+  },
+  "filePaths": {
+    "checked": 233,
+    "missing": []
+  }
+}

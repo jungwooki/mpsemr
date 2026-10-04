@@ -40,7 +40,8 @@
     "src/scripts/paper-surveys.js",
     "src/scripts/bootstrap.js",
     "src/scripts/survey-summary.js",
-    "src/scripts/clinical-v2.js"
+    "src/scripts/clinical-v2.js",
+    "src/scripts/staff-report-theme.js"
   ],
   "server": [
     "server/records.gs",

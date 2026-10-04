@@ -1,0 +1,17 @@
+/* Shared hospital report sample presentation; values and print layouts are preserved. */
+@font-face{font-family:Pretendard;src:url('PretendardVariable.woff2') format('woff2');font-weight:100 900;font-display:swap}
+@media screen{
+:root{--navy:#17395c;--ink:#243b53;--sub:#65768a;--paper:#fff;--cream:#f2f8ff;--cream2:#eaf9f7;--line:#dce5ef;--blue:#287ce5;--blue-soft:#f2f8ff;--soft:#f2f8ff;--teal:#427c7b}
+body{background:#e9eef5!important;color:#243b53;font-family:Pretendard,sans-serif!important}button,select,input,textarea{font-family:inherit}
+:is(h1,h2,h3,.main-title,.page-title,.heading){color:#17395c}
+:is(.page,.sheet,.report-page){background:#fff!important;border-color:#dce5ef!important;border-radius:18px!important;box-shadow:0 5px 25px #17395c08!important}
+:is(.card,.dashboard-card,.care-card,.engine-card,.overview-slab,.growth-summary-header){border-color:#dce5ef;border-radius:15px;background:#f2f8ff}
+:is(.toolbar,.topbar,.viewer-nav){background:#fff!important;border-color:#dce5ef!important;color:#17395c}
+:is(.toolbar,.topbar,.viewer-nav) :is(button,select){border:1px solid #dce5ef!important;border-radius:7px!important;background:#fff!important;color:#17395c!important}
+:is(.toolbar,.topbar,.viewer-nav) button:hover{background:#f2f8ff!important}
+:is(.track,.metric-track,.aff-track,.benchmark-track,.monitor-track,.bar-rail){background:#e2edfb;border-radius:16px;overflow:hidden}
+:is(.metric-fill,.aff-fill,.monitor-value){border-radius:16px}
+:is(.guide-disclaimer,footer,.footer){color:#65768a}
+:is(.download,.back){border-radius:8px}.download{background:#17395c}
+body>header{background:#fff;border-color:#dce5ef}
+}

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해온 MSK 초음파 5분 프로토콜: 팔꿈치</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap');
+        body { font-family: 'Pretendard', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .step-active { border-left: 4px solid #0ea5e9; background-color: #f0f9ff; }
+        .custom-scroll::-webkit-scrollbar { width: 4px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .finding-tag { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="h-screen flex flex-col overflow-hidden">
+
+    <!-- Top Navigation / Header -->
+    <header class="bg-white border-b border-slate-200 h-16 flex items-center justify-between px-6 shrink-0 z-30 shadow-sm">
+        <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-sky-600 rounded-xl flex items-center justify-center text-white font-bold shadow-sky-200 shadow-lg">
+                肘
+            </div>
+            <div>
+                <h1 class="font-bold text-slate-800 leading-tight text-lg">팔꿈치 초음파 5분 프로토콜</h1>
+                <p class="text-[10px] text-slate-400 font-semibold tracking-wider uppercase">HAEON Sports Medicine & Training</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <div class="text-right hidden sm:block">
+                <span class="text-[10px] text-slate-400 font-bold uppercase">Time Elapsed</span>
+                <div id="timerDisplay" class="text-2xl font-mono font-bold text-sky-600 leading-none">00:00</div>
+            </div>
+            <div class="flex gap-2">
+                <button id="timerBtn" class="bg-sky-600 hover:bg-sky-700 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-md shadow-sky-100">
+                    시작
+                </button>
+                <button id="resetBtn" class="bg-slate-100 hover:bg-slate-200 text-slate-500 px-3 py-2 rounded-lg transition-all text-sm">
+                    초기화
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex flex-1 overflow-hidden">
+        <!-- Sidebar: Step Navigation -->
+        <aside class="w-72 bg-white border-r border-slate-200 hidden md:flex flex-col shrink-0 custom-scroll overflow-y-auto">
+            <div class="p-6">
+                <h2 class="text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-6">Scan Sequence</h2>
+                <div id="stepNav" class="space-y-2">
+                    <!-- Steps injected by JS -->
+                </div>
+            </div>
+            
+            <div class="mt-auto p-6 bg-slate-50 border-t border-slate-100">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
+                    <h3 class="text-xs font-bold text-slate-600 uppercase">System Optimization</h3>
+                </div>
+                <ul class="space-y-2">
+                    <li class="text-[11px] text-slate-500 flex justify-between"><span>Focus Depth</span><span class="text-sky-600 font-bold text-[10px]">1.5 - 2.0cm</span></li>
+                    <li class="text-[11px] text-slate-500 flex justify-between"><span>Dynamic Range</span><span class="text-sky-600 font-bold text-[10px]">Medium-High</span></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="flex-1 overflow-y-auto bg-slate-50 p-6 md:p-10 custom-scroll">
+            
+            <!-- Landing View -->
+            <div id="landingView" class="max-w-4xl mx-auto py-12 text-center">
+                <div class="mb-8">
+                    <span class="inline-block px-4 py-1 bg-sky-100 text-sky-700 text-xs font-bold rounded-full mb-4">ELBOW PROTOCOL v1.5</span>
+                    <h2 class="text-4xl font-black text-slate-800 mb-4 tracking-tight">팔꿈치 관절의 정밀한 시각화</h2>
+                    <p class="text-slate-500 max-w-lg mx-auto leading-relaxed">
+                        전방 관절낭에서 후방 척골신경까지, 팔꿈치 통증의 주요 원인을 5분 안에 체계적으로 스캔합니다. 해온한의원만의 통합 진단 가이드입니다.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-2xl mb-2">🦴</div>
+                        <h4 class="font-bold text-slate-800">Bony Landmark</h4>
+                        <p class="text-xs text-slate-400 mt-1">상완골 소두(Capitellum)와 활차(Trochlea)의 선명한 획득</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-2xl mb-2">⚡</div>
+                        <h4 class="font-bold text-slate-800">Nerve Tracking</h4>
+                        <p class="text-xs text-slate-400 mt-1">척골신경 및 요골신경의 포착 지점 정밀 스캔</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-2xl mb-2">📋</div>
+                        <h4 class="font-bold text-slate-800">Clinic Notes</h4>
+                        <p class="text-xs text-slate-400 mt-1">초음파 소견을 기반으로 한 차트 요약 자동화</p>
+                    </div>
+                </div>
+                <button onclick="startProtocol()" class="bg-sky-600 hover:bg-sky-700 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-sky-200 hover:-translate-y-1">
+                    팔꿈치 프로토콜 시작
+                </button>
+            </div>
+
+            <!-- Active Protocol Interface -->
+            <div id="protocolInterface" class="max-w-6xl mx-auto hidden space-y-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Left: Instructions -->
+                    <div class="lg:col-span-8 space-y-6">
+                        <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-sky-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
+                            
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span id="stepNumber" class="text-sky-600 font-black text-4xl">01</span>
+                                    <div>
+                                        <h3 id="stepTitle" class="text-2xl font-bold text-slate-800">Anterior Joint</h3>
+                                        <p id="stepSubtitle" class="text-sky-500 font-semibold text-sm">Joint Effusion & Brachialis</p>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                                    <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100">
+                                        <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Positioning</h4>
+                                        <p id="posInfo" class="text-slate-700 font-medium leading-relaxed">팔을 완전히 펴서(Extension) 전방 관절면이 잘 보이도록 합니다.</p>
+                                    </div>
+                                    <div class="p-5 bg-sky-50 rounded-2xl border border-sky-100">
+                                        <h4 class="text-[10px] font-bold text-sky-400 uppercase tracking-widest mb-3">Acupuncture Point (KM)</h4>
+                                        <p id="kmPoint" class="text-sky-900 font-bold text-lg italic">척택(LU5), 곡택(PC3)</p>
+                                    </div>
+                                </div>
+
+                                <div class="mt-8">
+                                    <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Scanning Method</h4>
+                                    <div class="flex items-start gap-4 p-5 bg-white border-2 border-slate-50 rounded-2xl">
+                                        <span class="text-2xl">📡</span>
+                                        <p id="scanInfo" class="text-slate-600 leading-relaxed text-sm">상완근(Brachialis) 하방의 관절낭 삼출액 여부와 원회내근(Pronator Teres)을 관찰합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Checklist Section -->
+                        <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200">
+                            <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Diagnostic Findings Checklist</h4>
+                            <div id="checklistItems" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <!-- Checkboxes injected here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Summary & EMR -->
+                    <div class="lg:col-span-4 space-y-6">
+                        <!-- Progress Chart -->
+                        <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 flex flex-col items-center">
+                            <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6 text-center">Protocol Progress</h4>
+                            <div class="relative w-48 h-48">
+                                <canvas id="progressChart"></canvas>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span id="progressPercent" class="text-3xl font-black text-slate-800">0%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EMR Box -->
+                        <div class="bg-slate-900 rounded-3xl p-8 text-white shadow-xl shadow-slate-200">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">EMR Clinical Note</h4>
+                                <span class="px-2 py-0.5 bg-slate-800 text-sky-400 text-[9px] font-bold rounded">AUTO-GEN</span>
+                            </div>
+                            <div id="emrOutput" class="text-xs leading-relaxed text-slate-400 min-h-[100px] font-mono p-4 bg-slate-800 rounded-xl mb-6">
+                                소견을 선택하면 기록이 생성됩니다...
+                            </div>
+                            <button onclick="copyEMR()" class="w-full py-3 bg-sky-600 hover:bg-sky-500 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                                📋 소견 복사하기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Control -->
+                <div class="flex justify-between items-center py-6 border-t border-slate-200">
+                    <button id="prevBtn" class="px-6 py-2 text-slate-400 font-bold hover:text-slate-800 transition-all">← PREVIOUS</button>
+                    <div id="stepDots" class="flex gap-2 text-[8px] text-slate-200">
+                        <!-- Dots injected here -->
+                    </div>
+                    <button id="nextBtn" class="bg-slate-800 text-white px-8 py-3 rounded-xl font-bold shadow-lg hover:bg-slate-900 transition-all">
+                        NEXT STEP →
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const protocolSteps = [
+            {
+                id: 1,
+                title: "Anterior Joint",
+                subtitle: "Effusion & Distal Biceps",
+                pos: "Extension & Supination (팔을 펴고 손바닥 위로)",
+                kmPoint: "척택(LU5), 곡택(PC3)",
+                scan: "Anterior fat pad lifting 여부로 Joint effusion 확인. 요골두(Radial head)와 소두(Capitellum) 관절면 관찰",
+                checks: [
+                    { id: "e1", label: "Joint Effusion (+)", detail: "Sail sign or Fat pad lifting" },
+                    { id: "e2", label: "Loose Body", detail: "Intra-articular floating body" },
+                    { id: "e3", label: "Distal Biceps Tendinosis", detail: "Insertion point check" }
+                ]
+            },
+            {
+                id: 2,
+                title: "Medial Elbow",
+                subtitle: "Common Flexor Tendon (CFT)",
+                pos: "External Rotation & Supination (골퍼 엘보 스캔)",
+                kmPoint: "소해(HT8), 곡지(LI11)",
+                scan: "내상과(Medial Epicondyle)에서 시작되는 총굴근건의 부착부 장축/단축 관찰. 내측측부인대(UCL) 확인",
+                checks: [
+                    { id: "m1", label: "Golfer's Elbow (CFT)", detail: "Hypoechoic thickening or tear" },
+                    { id: "m2", label: "UCL Instability", detail: "Valgus stress dynamic test needed" },
+                    { id: "m3", label: "Medial Epicondylitis", detail: "Bony irregularity" }
+                ]
+            },
+            {
+                id: 3,
+                title: "Lateral Elbow",
+                subtitle: "Common Extensor Tendon (CET)",
+                pos: "Pronation & Flexion (테니스 엘보 스캔)",
+                kmPoint: "곡지(LI11), 수삼리(LI10)",
+                scan: "외상과(Lateral Epicondyle) 위 CET 부착부 관찰. 상완요골근(Brachioradialis)과 경계를 확인",
+                checks: [
+                    { id: "l1", label: "Tennis Elbow (CET)", detail: "High grade partial tear or tendinosis" },
+                    { id: "l2", label: "Radial Head Subluxation", detail: "Annular ligament area" },
+                    { id: "l3", label: "Enthesophyte", detail: "Chronic traction change" }
+                ]
+            },
+            {
+                id: 4,
+                title: "Posterior Elbow",
+                subtitle: "Olecranon & Triceps",
+                pos: "Hyper-flexion (최대한 굽힌 자세)",
+                kmPoint: "천정(TE10), 주료(LI12)",
+                scan: "주두 점액낭(Olecranon bursa) 삼출액 및 삼두근(Triceps) 건 부착부 확인. 활차(Trochlea)의 연골 두께 측정",
+                checks: [
+                    { id: "p1", label: "Olecranon Bursitis", detail: "Fluid collection on posterior tip" },
+                    { id: "p2", label: "Triceps Tendinosis", detail: "Enthesopathy or calcification" },
+                    { id: "p3", label: "Trochlear Cartilage Change", detail: "OA change indication" }
+                ]
+            },
+            {
+                id: 5,
+                title: "Cubital Tunnel",
+                subtitle: "Ulnar Nerve Assessment",
+                pos: "Flexion/Extension Dynamic Test (팔을 굽혔다 폈다 반복)",
+                kmPoint: "소해(SI8), 노수(臑兪)",
+                scan: "척골신경(Ulnar nerve)의 단면적(CSA) 측정 및 굴곡 시 신경 탈구(Subluxation) 여부 확인",
+                checks: [
+                    { id: "u1", label: "Ulnar Nerve Swelling", detail: "CSA > 10mm² at tunnel" },
+                    { id: "u2", label: "Nerve Subluxation", detail: "Dislocation over epicondyle" },
+                    { id: "u3", label: "Osborne's Ligament", detail: "Thickened arcuate ligament" }
+                ]
+            }
+        ];
+
+        let state = {
+            currentIdx: 0,
+            visitedSteps: new Set(),
+            findings: new Map(),
+            timerSeconds: 0,
+            timerRunning: false,
+            interval: null,
+            chart: null
+        };
+
+        function init() {
+            renderNav();
+            initChart();
+            setupEvents();
+            renderStepDots();
+        }
+
+        function renderNav() {
+            const container = document.getElementById('stepNav');
+            container.innerHTML = protocolSteps.map((step, idx) => `
+                <button onclick="setActiveStep(${idx})" class="w-full text-left px-4 py-3 rounded-xl transition-all flex items-center gap-4 ${state.currentIdx === idx ? 'step-active shadow-sm font-bold' : 'text-slate-400 hover:bg-slate-50'}">
+                    <span class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs ${state.currentIdx === idx ? 'bg-sky-600 text-white shadow-md shadow-sky-100' : 'bg-slate-100'}">${idx + 1}</span>
+                    <span class="text-sm">${step.title}</span>
+                </button>
+            `).join('');
+        }
+
+        function renderStepDots() {
+            const container = document.getElementById('stepDots');
+            container.innerHTML = protocolSteps.map((_, i) => `<span class="w-2 h-2 rounded-full ${state.currentIdx === i ? 'bg-sky-600' : 'bg-slate-200'}">●</span>`).join('');
+        }
+
+        function initChart() {
+            const ctx = document.getElementById('progressChart').getContext('2d');
+            state.chart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [0, 100],
+                        backgroundColor: ['#0ea5e9', '#f1f5f9'],
+                        borderWidth: 0,
+                        cutout: '85%'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { tooltip: false, legend: false },
+                    animation: { duration: 1000, easing: 'easeOutQuart' }
+                }
+            });
+        }
+
+        function startProtocol() {
+            document.getElementById('landingView').classList.add('hidden');
+            document.getElementById('protocolInterface').classList.remove('hidden');
+            setActiveStep(0);
+        }
+
+        function setActiveStep(idx) {
+            state.currentIdx = idx;
+            state.visitedSteps.add(idx);
+            
+            const step = protocolSteps[idx];
+            document.getElementById('stepNumber').innerText = (idx + 1).toString().padStart(2, '0');
+            document.getElementById('stepTitle').innerText = step.title;
+            document.getElementById('stepSubtitle').innerText = step.subtitle;
+            document.getElementById('posInfo').innerText = step.pos;
+            document.getElementById('kmPoint').innerText = step.kmPoint;
+            document.getElementById('scanInfo').innerText = step.scan;
+
+            renderChecklist(step);
+            renderNav();
+            renderStepDots();
+            updateProgress();
+            
+            // Buttons
+            document.getElementById('prevBtn').style.visibility = idx === 0 ? 'hidden' : 'visible';
+            document.getElementById('nextBtn').innerText = idx === protocolSteps.length - 1 ? 'COMPLETE PROTOCOL' : 'NEXT STEP →';
+        }
+
+        function renderChecklist(step) {
+            const container = document.getElementById('checklistItems');
+            container.innerHTML = step.checks.map(check => `
+                <label class="flex items-center gap-4 p-4 bg-slate-50 border border-slate-100 rounded-2xl cursor-pointer hover:border-sky-200 hover:bg-white transition-all group">
+                    <input type="checkbox" 
+                        ${state.findings.has(check.id) ? 'checked' : ''} 
+                        onchange="toggleFinding('${check.id}', '${check.label}', '${step.title}')"
+                        class="w-5 h-5 rounded border-slate-300 text-sky-600 focus:ring-sky-500">
+                    <div class="flex-1">
+                        <p class="text-sm font-bold text-slate-700 group-hover:text-sky-700 transition-colors">${check.label}</p>
+                        <p class="text-[10px] text-slate-400 font-medium">${check.detail}</p>
+                    </div>
+                </label>
+            `).join('');
+        }
+
+        function toggleFinding(id, label, stepTitle) {
+            if (state.findings.has(id)) {
+                state.findings.delete(id);
+            } else {
+                state.findings.set(id, { label, stepTitle });
+            }
+            updateEMR();
+        }
+
+        function updateEMR() {
+            const output = document.getElementById('emrOutput');
+            if (state.findings.size === 0) {
+                output.innerText = "특이 소견 없음 (WNL)";
+                return;
+            }
+
+            let text = "[Elbow Ultrasound Clinical Note]\n";
+            const grouped = Array.from(state.findings.values());
+            text += grouped.map(f => `• ${f.label} (${f.stepTitle})`).join('\n');
+            output.innerText = text;
+        }
+
+        function updateProgress() {
+            const progress = Math.round((state.visitedSteps.size / protocolSteps.length) * 100);
+            document.getElementById('progressPercent').innerText = `${progress}%`;
+            state.chart.data.datasets[0].data = [progress, 100 - progress];
+            state.chart.update();
+        }
+
+        function setupEvents() {
+            document.getElementById('timerBtn').addEventListener('click', toggleTimer);
+            document.getElementById('resetBtn').addEventListener('click', resetAll);
+            document.getElementById('nextBtn').addEventListener('click', () => {
+                if (state.currentIdx < protocolSteps.length - 1) {
+                    setActiveStep(state.currentIdx + 1);
+                } else {
+                    alert("팔꿈치 5분 스캔 프로토콜을 완료하셨습니다. 차트 기록을 복사하세요.");
+                }
+            });
+            document.getElementById('prevBtn').addEventListener('click', () => {
+                if (state.currentIdx > 0) setActiveStep(state.currentIdx - 1);
+            });
+        }
+
+        function toggleTimer() {
+            const btn = document.getElementById('timerBtn');
+            if (state.timerRunning) {
+                clearInterval(state.interval);
+                btn.innerText = "계속";
+                btn.className = "bg-amber-500 hover:bg-amber-600 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-md";
+            } else {
+                state.interval = setInterval(() => {
+                    state.timerSeconds++;
+                    const m = Math.floor(state.timerSeconds / 60).toString().padStart(2, '0');
+                    const s = (state.timerSeconds % 60).toString().padStart(2, '0');
+                    const display = document.getElementById('timerDisplay');
+                    display.innerText = `${m}:${s}`;
+                    if(state.timerSeconds > 300) display.classList.add('text-red-500');
+                }, 1000);
+                btn.innerText = "일시정지";
+                btn.className = "bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-md";
+            }
+            state.timerRunning = !state.timerRunning;
+        }
+
+        function copyEMR() {
+            const text = document.getElementById('emrOutput').innerText;
+            if(text === "소견을 선택하면 기록이 생성됩니다...") return;
+            
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            
+            const btn = event.currentTarget;
+            const original = btn.innerHTML;
+            btn.innerHTML = "✅ 복사 완료!";
+            btn.classList.replace('bg-sky-600', 'bg-green-600');
+            setTimeout(() => {
+                btn.innerHTML = original;
+                btn.classList.replace('bg-green-600', 'bg-sky-600');
+            }, 1500);
+        }
+
+        function resetAll() {
+            if(!confirm("모든 데이터를 초기화하시겠습니까?")) return;
+            location.reload();
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

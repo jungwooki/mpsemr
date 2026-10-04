@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해온 MSK 초음파 5분 프로토콜: 어깨</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap');
+        body { font-family: 'Pretendard', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .step-active { border-left: 4px solid #2563eb; background-color: #eff6ff; }
+        .custom-scroll::-webkit-scrollbar { width: 4px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .finding-tag { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="h-screen flex flex-col overflow-hidden">
+
+    <!-- Top Navigation / Header -->
+    <header class="bg-white border-b border-slate-200 h-16 flex items-center justify-between px-6 shrink-0 z-30 shadow-sm">
+        <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold shadow-blue-200 shadow-lg">
+                肩
+            </div>
+            <div>
+                <h1 class="font-bold text-slate-800 leading-tight text-lg">어깨 초음파 5분 프로토콜</h1>
+                <p class="text-[10px] text-slate-400 font-semibold tracking-wider uppercase">HAEON Sports Medicine & Training</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <div class="text-right hidden sm:block">
+                <span class="text-[10px] text-slate-400 font-bold uppercase">Time Elapsed</span>
+                <div id="timerDisplay" class="text-2xl font-mono font-bold text-blue-600 leading-none">00:00</div>
+            </div>
+            <div class="flex gap-2">
+                <button id="timerBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-md shadow-blue-100">
+                    시작
+                </button>
+                <button id="resetBtn" class="bg-slate-100 hover:bg-slate-200 text-slate-500 px-3 py-2 rounded-lg transition-all text-sm">
+                    초기화
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex flex-1 overflow-hidden">
+        <!-- Sidebar: Step Navigation -->
+        <aside class="w-72 bg-white border-r border-slate-200 hidden md:flex flex-col shrink-0 custom-scroll overflow-y-auto">
+            <div class="p-6">
+                <h2 class="text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-6">Scan Sequence</h2>
+                <div id="stepNav" class="space-y-2">
+                    <!-- Steps injected by JS -->
+                </div>
+            </div>
+            
+            <div class="mt-auto p-6 bg-slate-50 border-t border-slate-100">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                    <h3 class="text-xs font-bold text-slate-600 uppercase">System Optimization</h3>
+                </div>
+                <ul class="space-y-2">
+                    <li class="text-[11px] text-slate-500 flex justify-between"><span>Virtual Convex</span><span class="text-blue-600 font-bold text-[10px]">ON</span></li>
+                    <li class="text-[11px] text-slate-500 flex justify-between"><span>B-Steer Angle</span><span class="text-blue-600 font-bold text-[10px]">Adjusted</span></li>
+                    <li class="text-[11px] text-slate-500 flex justify-between"><span>Cross Beam</span><span class="text-blue-600 font-bold text-[10px]">High</span></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="flex-1 overflow-y-auto bg-slate-50 p-6 md:p-10 custom-scroll">
+            
+            <!-- Landing View -->
+            <div id="landingView" class="max-w-4xl mx-auto py-12 text-center">
+                <div class="mb-8">
+                    <span class="inline-block px-4 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full mb-4">CLINIC PROTOCOL v2.0</span>
+                    <h2 class="text-4xl font-black text-slate-800 mb-4 tracking-tight">정밀한 진단, 시각화된 치료</h2>
+                    <p class="text-slate-500 max-w-lg mx-auto leading-relaxed">
+                        본 프로토콜은 해온한의원 및 스포츠 팀닥터 환경에 최적화된 초음파 스캔 가이드입니다. 5분 이내에 주요 구조물을 빠짐없이 확인하십시오.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-2xl mb-2">📸</div>
+                        <h4 class="font-bold text-slate-800">Standard Scan</h4>
+                        <p class="text-xs text-slate-400 mt-1">GE Shoulder Preset 기반 고해상도 이미지 획득</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-2xl mb-2">📍</div>
+                        <h4 class="font-bold text-slate-800">KM Integration</h4>
+                        <p class="text-xs text-slate-400 mt-1">해부학적 구조와 경혈점(LI15, SI10 등)의 입체적 결합</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="text-2xl mb-2">📝</div>
+                        <h4 class="font-bold text-slate-800">Auto EMR</h4>
+                        <p class="text-xs text-slate-400 mt-1">선택된 소견을 바탕으로 차트용 텍스트 자동 생성</p>
+                    </div>
+                </div>
+                <button onclick="startProtocol()" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl shadow-blue-200 hover:-translate-y-1">
+                    프로토콜 시작하기
+                </button>
+            </div>
+
+            <!-- Active Protocol Interface -->
+            <div id="protocolInterface" class="max-w-6xl mx-auto hidden space-y-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Left: Instructions -->
+                    <div class="lg:col-span-8 space-y-6">
+                        <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
+                            
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span id="stepNumber" class="text-blue-600 font-black text-4xl">01</span>
+                                    <div>
+                                        <h3 id="stepTitle" class="text-2xl font-bold text-slate-800">Biceps Tendon</h3>
+                                        <p id="stepSubtitle" class="text-blue-500 font-semibold text-sm">Long Head (LHB) Scan</p>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                                    <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100">
+                                        <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Positioning</h4>
+                                        <p id="posInfo" class="text-slate-700 font-medium leading-relaxed">자세 정보가 여기에 표시됩니다.</p>
+                                    </div>
+                                    <div class="p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                                        <h4 class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-3">Acupuncture Point (KM)</h4>
+                                        <p id="kmPoint" class="text-blue-900 font-bold text-lg italic">연관 혈자리 정보</p>
+                                    </div>
+                                </div>
+
+                                <div class="mt-8">
+                                    <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Scanning Method</h4>
+                                    <div class="flex items-start gap-4 p-5 bg-white border-2 border-slate-50 rounded-2xl">
+                                        <span class="text-2xl">📡</span>
+                                        <p id="scanInfo" class="text-slate-600 leading-relaxed text-sm">스캔 상세 방법이 표시됩니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Checklist Section -->
+                        <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200">
+                            <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Diagnostic Findings Checklist</h4>
+                            <div id="checklistItems" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <!-- Checkboxes injected here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Summary & EMR -->
+                    <div class="lg:col-span-4 space-y-6">
+                        <!-- Progress Chart -->
+                        <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-200 flex flex-col items-center">
+                            <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6 text-center">Protocol Progress</h4>
+                            <div class="relative w-48 h-48">
+                                <canvas id="progressChart"></canvas>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span id="progressPercent" class="text-3xl font-black text-slate-800">0%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EMR Box -->
+                        <div class="bg-slate-900 rounded-3xl p-8 text-white shadow-xl shadow-slate-200">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">EMR Clinical Note</h4>
+                                <span class="px-2 py-0.5 bg-slate-800 text-blue-400 text-[9px] font-bold rounded">AUTO-GEN</span>
+                            </div>
+                            <div id="emrOutput" class="text-xs leading-relaxed text-slate-400 min-h-[100px] font-mono p-4 bg-slate-800 rounded-xl mb-6">
+                                소견을 선택하면 기록이 생성됩니다...
+                            </div>
+                            <button onclick="copyEMR()" class="w-full py-3 bg-blue-600 hover:bg-blue-500 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                                📋 소견 복사하기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Control -->
+                <div class="flex justify-between items-center py-6 border-t border-slate-200">
+                    <button id="prevBtn" class="px-6 py-2 text-slate-400 font-bold hover:text-slate-800 transition-all">← PREVIOUS</button>
+                    <div id="stepDots" class="flex gap-2 text-[8px] text-slate-200">
+                        <!-- Dots injected here -->
+                    </div>
+                    <button id="nextBtn" class="bg-slate-800 text-white px-8 py-3 rounded-xl font-bold shadow-lg hover:bg-slate-900 transition-all">
+                        NEXT STEP →
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const protocolSteps = [
+            {
+                id: 1,
+                title: "Biceps Tendon",
+                subtitle: "The Landmark (LHB)",
+                pos: "Neutral, Supination (팔을 편하게 두고 손바닥이 위로)",
+                kmPoint: "견전(肩前), 견우(肩髃)",
+                scan: "Bicipital Groove에서 SAX(단축) 스캔 후 장축으로 전환하여 연속성 확인",
+                checks: [
+                    { id: "b1", label: "Effusion (+)", detail: "Tenosynovitis suspected" },
+                    { id: "b2", label: "Medial Subluxation", detail: "Check Transverse Humeral Ligament" },
+                    { id: "b3", label: "Tendinosis", detail: "Hypoechoic thickening" }
+                ]
+            },
+            {
+                id: 2,
+                title: "Subscapularis",
+                subtitle: "Internal Rotator Scan",
+                pos: "External Rotation (팔꿈치를 붙이고 밖으로 회전)",
+                kmPoint: "노수(臑兪), 견정(肩貞)",
+                scan: "이두근건 내측의 견갑하근 부착부 관찰, 외회전 시 건이 팽팽해지는 모습 확인",
+                checks: [
+                    { id: "s1", label: "Subscapularis Tear", detail: "Partial or Full thickness" },
+                    { id: "s2", label: "Calcific Tendonitis", detail: "Acoustic shadowing inside" },
+                    { id: "s3", label: "Bony Irregularity", detail: "Lesser tuberosity profile" }
+                ]
+            },
+            {
+                id: 3,
+                title: "Supraspinatus",
+                subtitle: "Critical Zone Assessment",
+                pos: "Modified Crass (뒷주머니에 손을 넣는 자세)",
+                kmPoint: "곡원(曲垣), 거골(巨骨)",
+                scan: "극상근 부착부 1-2cm 지점 집중 관찰. 빗살무늬 패턴의 연속성 체크",
+                checks: [
+                    { id: "sp1", label: "Full Thickness Tear", detail: "SST FTT confirmed" },
+                    { id: "sp2", label: "Articular Surface Tear", detail: "Partial thickness tear" },
+                    { id: "sp3", label: "Cartilage Interface (+)", detail: "Double cortex sign" }
+                ]
+            },
+            {
+                id: 4,
+                title: "SASB Bursa & ACJ",
+                subtitle: "Bursa & Joint Assessment",
+                pos: "Neutral & Dynamic Abduction (옆으로 들어올리기)",
+                kmPoint: "견료(肩髎), 견우(肩髃)",
+                scan: "점액낭 두께 측정 및 AC joint 골극 관찰. 외전 시 견봉 하방 끼임 유무 확인",
+                checks: [
+                    { id: "sa1", label: "Subacromial Bursitis", detail: ">2mm thickened bursa" },
+                    { id: "sa2", label: "Dynamic Impingement", detail: "Bunching observed" },
+                    { id: "sa3", label: "AC Joint Osteophyte", detail: "OA change" }
+                ]
+            },
+            {
+                id: 5,
+                title: "Infraspinatus",
+                subtitle: "Posterior View",
+                pos: "Cross-body (팔을 반대쪽 어깨 위로)",
+                kmPoint: "천종(天宗), 견외수(肩外兪)",
+                scan: "후방 관절면(Posterior Joint Line) 및 관절와순(Labrum) 관찰",
+                checks: [
+                    { id: "i1", label: "Posterior Labrum Cyst", detail: "Paralabral cyst" },
+                    { id: "i2", label: "Joint Effusion", detail: "Posterior recess fluid" },
+                    { id: "i3", label: "Infraspinatus Atrophy", detail: "Muscular fatty change" }
+                ]
+            }
+        ];
+
+        let state = {
+            currentIdx: 0,
+            visitedSteps: new Set(),
+            findings: new Map(),
+            timerSeconds: 0,
+            timerRunning: false,
+            interval: null,
+            chart: null
+        };
+
+        function init() {
+            renderNav();
+            initChart();
+            setupEvents();
+            renderStepDots();
+        }
+
+        function renderNav() {
+            const container = document.getElementById('stepNav');
+            container.innerHTML = protocolSteps.map((step, idx) => `
+                <button onclick="setActiveStep(${idx})" class="w-full text-left px-4 py-3 rounded-xl transition-all flex items-center gap-4 ${state.currentIdx === idx ? 'step-active shadow-sm' : 'text-slate-400 hover:bg-slate-50'}">
+                    <span class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs ${state.currentIdx === idx ? 'bg-blue-600 text-white shadow-md shadow-blue-100' : 'bg-slate-100'}">${idx + 1}</span>
+                    <span class="text-sm font-bold">${step.title}</span>
+                </button>
+            `).join('');
+        }
+
+        function renderStepDots() {
+            const container = document.getElementById('stepDots');
+            container.innerHTML = protocolSteps.map((_, i) => `<span class="w-2 h-2 rounded-full ${state.currentIdx === i ? 'bg-blue-600' : 'bg-slate-200'}">●</span>`).join('');
+        }
+
+        function initChart() {
+            const ctx = document.getElementById('progressChart').getContext('2d');
+            state.chart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [0, 100],
+                        backgroundColor: ['#2563eb', '#f1f5f9'],
+                        borderWidth: 0,
+                        cutout: '85%'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { tooltip: false, legend: false },
+                    animation: { duration: 1000, easing: 'easeOutQuart' }
+                }
+            });
+        }
+
+        function startProtocol() {
+            document.getElementById('landingView').classList.add('hidden');
+            document.getElementById('protocolInterface').classList.remove('hidden');
+            setActiveStep(0);
+        }
+
+        function setActiveStep(idx) {
+            state.currentIdx = idx;
+            state.visitedSteps.add(idx);
+            
+            const step = protocolSteps[idx];
+            document.getElementById('stepNumber').innerText = (idx + 1).toString().padStart(2, '0');
+            document.getElementById('stepTitle').innerText = step.title;
+            document.getElementById('stepSubtitle').innerText = step.subtitle;
+            document.getElementById('posInfo').innerText = step.pos;
+            document.getElementById('kmPoint').innerText = step.kmPoint;
+            document.getElementById('scanInfo').innerText = step.scan;
+
+            renderChecklist(step);
+            renderNav();
+            renderStepDots();
+            updateProgress();
+            
+            // Buttons
+            document.getElementById('prevBtn').style.visibility = idx === 0 ? 'hidden' : 'visible';
+            document.getElementById('nextBtn').innerText = idx === protocolSteps.length - 1 ? 'COMPLETE PROTOCOL' : 'NEXT STEP →';
+        }
+
+        function renderChecklist(step) {
+            const container = document.getElementById('checklistItems');
+            container.innerHTML = step.checks.map(check => `
+                <label class="flex items-center gap-4 p-4 bg-slate-50 border border-slate-100 rounded-2xl cursor-pointer hover:border-blue-200 hover:bg-white transition-all group">
+                    <input type="checkbox" 
+                        ${state.findings.has(check.id) ? 'checked' : ''} 
+                        onchange="toggleFinding('${check.id}', '${check.label}', '${step.title}')"
+                        class="w-5 h-5 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                    <div class="flex-1">
+                        <p class="text-sm font-bold text-slate-700 group-hover:text-blue-700 transition-colors">${check.label}</p>
+                        <p class="text-[10px] text-slate-400">${check.detail}</p>
+                    </div>
+                </label>
+            `).join('');
+        }
+
+        function toggleFinding(id, label, stepTitle) {
+            if (state.findings.has(id)) {
+                state.findings.delete(id);
+            } else {
+                state.findings.set(id, { label, stepTitle });
+            }
+            updateEMR();
+        }
+
+        function updateEMR() {
+            const output = document.getElementById('emrOutput');
+            if (state.findings.size === 0) {
+                output.innerText = "특이 소견 없음 (WNL)";
+                return;
+            }
+
+            let text = "[Shoulder Ultrasound Findings]\n";
+            const grouped = Array.from(state.findings.values());
+            text += grouped.map(f => `• ${f.label} (${f.stepTitle})`).join('\n');
+            output.innerText = text;
+        }
+
+        function updateProgress() {
+            const progress = Math.round((state.visitedSteps.size / protocolSteps.length) * 100);
+            document.getElementById('progressPercent').innerText = `${progress}%`;
+            state.chart.data.datasets[0].data = [progress, 100 - progress];
+            state.chart.update();
+        }
+
+        function setupEvents() {
+            document.getElementById('timerBtn').addEventListener('click', toggleTimer);
+            document.getElementById('resetBtn').addEventListener('click', resetAll);
+            document.getElementById('nextBtn').addEventListener('click', () => {
+                if (state.currentIdx < protocolSteps.length - 1) {
+                    setActiveStep(state.currentIdx + 1);
+                } else {
+                    alert("축하합니다! 어깨 5분 스캔 프로토콜을 완료하셨습니다.");
+                }
+            });
+            document.getElementById('prevBtn').addEventListener('click', () => {
+                if (state.currentIdx > 0) setActiveStep(state.currentIdx - 1);
+            });
+        }
+
+        function toggleTimer() {
+            const btn = document.getElementById('timerBtn');
+            if (state.timerRunning) {
+                clearInterval(state.interval);
+                btn.innerText = "계속";
+                btn.className = "bg-amber-500 hover:bg-amber-600 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-md";
+            } else {
+                state.interval = setInterval(() => {
+                    state.timerSeconds++;
+                    const m = Math.floor(state.timerSeconds / 60).toString().padStart(2, '0');
+                    const s = (state.timerSeconds % 60).toString().padStart(2, '0');
+                    const display = document.getElementById('timerDisplay');
+                    display.innerText = `${m}:${s}`;
+                    if(state.timerSeconds > 300) display.classList.add('text-red-500');
+                }, 1000);
+                btn.innerText = "일시정지";
+                btn.className = "bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-md";
+            }
+            state.timerRunning = !state.timerRunning;
+        }
+
+        function copyEMR() {
+            const text = document.getElementById('emrOutput').innerText;
+            if(text === "소견을 선택하면 기록이 생성됩니다...") return;
+            
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            
+            const btn = event.currentTarget;
+            const original = btn.innerHTML;
+            btn.innerHTML = "✅ 복사 완료!";
+            btn.classList.replace('bg-blue-600', 'bg-green-600');
+            setTimeout(() => {
+                btn.innerHTML = original;
+                btn.classList.replace('bg-green-600', 'bg-blue-600');
+            }, 1500);
+        }
+
+        function resetAll() {
+            if(!confirm("진행 내용을 초기화하시겠습니까?")) return;
+            location.reload();
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

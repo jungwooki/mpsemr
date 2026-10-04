@@ -12,8 +12,9 @@ nav += """<dialog id="guide-home-confirm" style="width:min(380px,calc(100% - 32p
 nav += '<nav class="guide-section-nav" aria-label="가이드 항목">' + ''.join('<a href="'+key+'.html">0'+str(i+1)+' '+label+'</a>' for i,(key,label) in enumerate([('process','진료 과정'),('prescription','기초한약'),('treatment','치료방법'),('diagnostic','진단검사')])) + '</nav>'
 nav += "<script>document.querySelectorAll('.guide-section-nav a').forEach(a=>{if(a.pathname===location.pathname)a.setAttribute('aria-current','page')});</script>"
 copyright_footer=(ROOT / 'src/shared/guide-disclaimer.html').read_text()+'<footer class="site-copyright" style="padding:18px 12px;text-align:center;color:#7b8392;font:10px/1.5 Pretendard,sans-serif;white-space:pre-wrap">Copyright 2026  HAEON CLINIC. All rights reserved.</footer>'
+staff_theme = """<script>(()=>{let staff=new URLSearchParams(location.search).get('audience')==='staff';try{staff=staff||(parent!==window&&parent.document.body.dataset.audience==='staff')}catch(e){}if(!staff)return;document.documentElement.dataset.audience='staff';const theme=document.createElement('link');theme.rel='stylesheet';theme.href='staff.css';document.head.appendChild(theme);document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('a[href]').forEach(a=>{const url=new URL(a.href,location.href);if(url.origin===location.origin&&url.pathname.startsWith(location.pathname.slice(0,location.pathname.lastIndexOf('/')+1))&&url.pathname.endsWith('.html')){url.searchParams.set('audience','staff');a.href=url.href}})})})();</script>"""
 def page(title, body, script=''):
-    return '<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+title+' · 해온 AI EMR</title><style>'+css+'</style></head><body>'+nav+body+script+copyright_footer+'</body></html>'
+    return '<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+title+' · 해온 AI EMR</title><style>'+css+'</style>'+staff_theme+'</head><body>'+nav+body+script+copyright_footer+'</body></html>'
 for key,title in TITLES[1:]:
     data=json.loads((GUIDES/(key+'.json')).read_text())
     data['kind']=key
@@ -26,7 +27,7 @@ source=re.sub(r'<link[^>]*fonts\.google[^>]*>', '', source)
 source=source.replace('Noto Sans KR','Pretendard').replace('Noto Serif KR','Pretendard')
 source=source.replace('#fdfbf7','#F8FAFC').replace('#1e3a8a','#2563EB').replace('#d97706','#2563EB').replace('#fff1f2','#F2EFFC')
 source=re.sub(r'<title>.*?</title>', '<title>'+TITLES[0][1]+' · 해온 AI EMR</title>',source)
-source=source.replace('</head>','<style>'+css+'</style></head>').replace('<body class="antialiased">','<body class="antialiased process">'+nav)
+source=source.replace('</head>','<style>'+css+'</style>'+staff_theme+'</head>').replace('<body class="antialiased">','<body class="antialiased process">'+nav)
 source=source.replace('<!-- Intro -->','<div class="guide-hero"><span class="guide-eyebrow">HAEON GUIDE</span><h1>'+TITLES[0][1]+'</h1></div><!-- Intro -->')
 source=source.replace('amber-', 'blue-').replace('orange-', 'violet-')
 source=source.replace('class="flip-card h-80"', '''class="flip-card h-80" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"''')

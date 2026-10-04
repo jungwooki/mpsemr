@@ -1,0 +1,767 @@
+The Open Neuroimaging Journal
+ISSN: 1874-4400
+DOI: 10.2174/0118744400367931250212094541, 2025, 18, e18744400367931
+1
+RESEARCH ARTICLE
+OPEN ACCESS
+Accuracy of Ultrasound in Bone Age Estimation in
+Iraqi Short-stature Children
+Maha Majeed Hameed
+1, Shaymaa Khalid Abdulqader
+2,*
+, Nabeeha Najatee Akram
+3, Wassan
+Nori Mohammed Hassan
+4 and Qays Ahmed Hassan
+2
+1Alresafa Specialized Center for Endocrinology and Diabetes, Baghdad, Iraq
+2Department of Radiology, University of Baghdad, Baghdad, Iraq
+3Department of Pediatrics, Mustansiriyah University, Baghdad, Iraq
+4Department of Obstetrics and Gynecology, Mustansiriyah University, Baghdad, Iraq
+Abstract:
+Background:  Bone  age  assessment  represents  an  important  step  in  the  management  of  children  with  Isolated
+Growth Hormone Deficiency (IGHD). This study examined the usefulness of Ultrasound (US) in the assessment of
+bone age in a sample of Iraqi children with IGHD as compared to radiography as a reference. Additionally, it verified
+if patient gender and growth hormone therapy have an impact on US accuracy.
+Methods: An observational cross-sectional study recruited children with isolated growth hormone deficiency who
+were diagnosed and followed at the Alresafa Specialized Center for Endocrinology and Diabetes, Baghdad, Iraq, over
+6 months. Children with IGHD from Iraqi nationality were recruited, while children from other nationalities or having
+multiple  hormonal  deficiencies,  syndromic  features,  and  parent  refused  participation  were  excluded.  For  each
+patient, a bone age assessment was conducted using two methods: US and TW2 hand-wrist radiographs at the same
+visit by the same radiologist.
+Results: A total of 116 children were included. The chronological age of recruited children was 7 to 17 years, with a
+mean of 13.01 ± 2.78 years. There were 67 males (57.9%) with a male-to-female ratio of 1.37:1. The patient's gender
+did not affect the US accuracy; there was a non-significant difference in the bone age estimated by the US and
+conventional radiograph for both male and female patients, (p-value = 0.087, 0.308) respectively. Those who received
+growth  hormone  therapy  and  those  who  did  not  for  both  male  and  female  patients  (p-value  =  0.071,0.243),
+respectively. There was a strong positive correlation between the means of bone age assessed by ultrasound (US) and
+conventional radiography for both males and females, with correlation coefficients of r = 0.788 and r = 0.703,
+respectively.
+Conclusion: Ultrasound may serve as a valid replacement for radiography in the assessment of bone age in children
+with short stature caused by a growth hormone deficiency, irrespective of the gender and treatment received. Thus, it
+may overcome radiography drawbacks for children who need sequential bone age assessment.
+Keywords: Bone age, Short stature, Tanner whitehouse, Ultrasound, Isolated Growth Hormone Deficiency (IGHD),
+Iraq.
+© 2025 The Author(s). Published by Bentham Open.
+This is an open access article distributed under the terms of the Creative Commons Attribution 4.0 International Public
+License (CC-BY 4.0), a copy of which is available at: https://creativecommons.org/licenses/by/4.0/legalcode. This license
+permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are
+credited.
+*Address correspondence to this author at the Department of Radiology, University of Baghdad, Baghdad, Iraq;
+E-mail: shaymaa.k@kmc.uobaghdad.edu.iq
+Cite as: Hameed M, Abdulqader S, Akram N, Hassan W, Hassan Q. Accuracy of Ultrasound in Bone Age Estimation in
+Iraqi Short-stature Children. Open Neuroimaging J, 2025; 18: e18744400367931.
+http://dx.doi.org/10.2174/0118744400367931250212094541
+Received: November 08, 2024
+Revised: December 04, 2024
+Accepted: January 15, 2025
+Send Orders for Reprints to
+reprints@benthamscience.net
+Published: February 19, 2025
+
+2   The Open Neuroimaging Journal, 2025, Vol. 18
+Hameed et al.
+1. INTRODUCTION
+Short  stature  in  children  is  a  common  parental
+concern, which is defined as having a height of more than
+2 standard deviations and a score below the mean [1, 2].
+Although it represents a prevalent manifestation of endo-
+crine  diseases  in  pediatrics,  on  evaluation,  only  a  small
+percentage of children will be found to have a pathological
+short stature [3]. Growth hormone deficiency is one of the
+pathological  causes  of  short  stature,  in  which  the  diag-
+nosis is suggested clinically and confirmed by growth hor-
+mone provocative tests [4]. Bone age assessment repre-
+sents an important step in the evaluation of children with
+growth hormone deficiency [5].
+For  years,  hand-wrist  radiography  was  the  gold
+standard  tool  used  to  assess  bone  age  using  different
+methods, including the Greulich and Pyle (GP) and Tanner-
+Whitehouse  (TW)  methods  [6].  The  GP  method  involves
+comparing the left hand and wrist radiographs with a set
+of  reference  images  in  a  standard  atlas.  It  is  relatively
+straightforward  and  commonly  used  in  clinical  practice.
+On  the  other  hand,  the  TW  method  is  considered  more
+precise  and  detailed  as  it  involves  a  scoring  system  to
+assess  each  bone  separately  [7].  Advances  in  bone  age
+assessment  have  resulted  in  the  introduction  of  newer
+methods, including computerized automatic systems [8, 9]
+and  magnetic  imaging  of  the  hand  [10].  In  addition,
+artificial intelligence models are being tested to overcome
+the long reading time and interobserver variability [11].
+Physicians were anxious about the cumulative ionizing
+dose from the wrist X-ray during bone age assessment. As
+a result, ultrasonography gained an increasing interest in
+bone age assessment because of its reliability and safety
+[12]. Previous studies discussed the reliability of bone age
+assessment by ultrasound and confirmed that there is a
+considerable variation in bone age between ethnic groups
+and sex. In the presence of pathological conditions, this
+study  was  conducted  to  assess  the  usefulness  of  ultra-
+sound to assess bone age in a sample of Iraqi children with
+isolated  growth  hormone  deficiency  as  compared  to
+radiography  as  a  reference  [6,  13].
+2. METHOD
+An  observational  cross-sectional  study  recruited
+children  with  isolated  growth  hormone  deficiency  who
+were diagnosed and followed at the Specialized Center for
+Endocrinology  and  Diabetes,  Baghdad,  Iraq,  over  a  6-
+month period from 1
+st of April 2024 to 30
+th of September
+2024. Patients were recruited after matching the following
+inclusion criteria: (1) Iraqi children with parental concern
+of short stature (2) the cause of short stature is isolated
+growth hormone deficiency confirmed by GH provocative
+test.
+Children were excluded from the study if they matched
+any of the following exclusion criteria: (1) Age > 18 years,
+(2) children with non-Iraqi nationality (3), multiple pituitary
+hormone deficiency, (4) children with other causes of short
+stature 5) children with syndromes or dysmorphic features,
+and (5) parents of children who refuse to participate in the
+study.  The  study  was  approved  by  the  scientific  ethical
+committee  of  AL  Kindy  College,  Baghdad  University.
+For each patient, a bone age assessment was conducted
+by  two  methods  (ultrasound  and  TW2  hand  wrist  radio-
+graphs)  at  the  same  visit  and  by  the  same  radiologist  to
+decrease the chance of bias and avoid observers' variability.
+The ultrasound method of assessing the bone age of the
+included children was performed in the radiology depart-
+ment by two specialist radiologists who had (5-10 years)' of
+experience  in  MSK  ultrasound,  especially  bone  age
+evaluation.  The  children's  age  and  other  medical  details
+were  concealed  from  the  radiologists  while  they  scanned
+and  measured  them  in  the  US,  and  both  examined  the
+children  blindly  to  avoid  bias.  GE  LOGIC  S8  ultrasound
+machine was used to conduct hand-held ultrasound using a
+9 MHz linear array transducer. Two sites were examined by
+ultrasound: the LT wrist joint (distal radial and distal ulnar
+bones) and the LT knee joint (distal femoral bone). All the
+included members did an LT wrist X-ray during the same
+visit for an ultrasound exam.
+The  method  of  the  ultrasound  examination  was
+explained to the child and his parents before the exam. The
+ultrasonic  probe  was  positioned  longitudinally  along  the
+distal lateral aspect of the forearm in the sagittal plane for
+imaging the radius. Pronation of the forearm was used to
+image the styloid process while the probe was positioned
+longitudinally along the distal lateral aspect in the coronal
+plane  for  ulna  imaging.  Finally,  for  imaging  the  femoral
+epicondyle, the probe was placed along the medial aspect of
+the knee joint in the coronal plane (Fig. 1). The ratio of the
+maximum height of the echogenic ossification center to the
+whole  epiphysis,  including  the  hypoechoic  cartilaginous
+part,  was  measured  for  the  three  mentioned  bones.  The
+three values were then summed and multiplied by 100 to
+obtain the ultrasonic skeletal maturity score. The ultrasonic
+bone  age  was  obtained  using  a  list  of  typical  age-appro-
+priate score values. The age of boys and girls whose scores
+fall  within  the  50th  percentile  [14]  was  then  determined
+[14].
+Bone age assessment by conventional hand-wrist radio-
+graphy  was  based  on  the  TW-2  RUS  (radio,  ulna,  and
+selected metacarpals and phalanges) method, which invol-
+ves a scoring system. It examines the development of 20
+bones, hand and wrist bones, and their ossification. Each of
+these bones is assessed for the developmental stage, which
+is assigned to a certain score, and the sum of the total score
+is compared to a reference that identifies a certain bone
+age [15, 16].
+The sample size calculated by the following formula is
+[17]:
+N = (Za/2 + Zb) 
+2 / r
+2
+where,  r  =  0.26  (expected  correlation)  taken  from
+earlier  studies  [18],  a  =  0.05,  which  is  the  significance
+level, power = 0.8 (desired power), Za = Standard normal
+variate for level of significance, and Zb = Standard normal
+variate for power or type 2 error.
+N = ((Za/2 + Zb)
+2 / r
+2)
+N = ((1.96 + 0.84)
+2 / 0.26
+2) N ≈ 116
+Therefore, the required sample size is 116.
+
+Accuracy of Ultrasound in Bone Age Estimation
+3
+Fig. (1). Ahows the US examination of the left wrist and left knee joints. A-C photos show the probe positioning during exam A) at the
+distal radius, B) at the distal ulna and C) at the distal femur.
+D-F  shows  the  way  by  which  we  measured  the  ossification  centers.  (the  orange  d)  represents  the  echogenic  part  of  the  epiphysis
+measured as the greatest height of the ossification center, while (the orange D) represents the hypoechoic epiphysis, including the
+echogenic ossification center. The d/D represents the ratio.
+2.1. Statistical Analysis
+SPSS version 25 was used to conduct data analyses.
+After  ensuring  the  data  was  normally  distributed  by
+Kolmogorov–Smirnov and Shapiro–Wilk tests, the ANOVA
+test  was  used  to  determine  the  significance  of  the
+difference among more than two means when comparing
+quantitative  data,  and  the  student's  t-test  was  used  to
+compare two independent means. ANOVA is a statistical
+technique that compares the means of multiple groups at
+the same time to ascertain whether observed differences
+are  the  result  of  chance  or  represent  true  differences.
+Multiple factors and their interactions can be handled by
+ANOVA, which offers a reliable method for comprehending
+complex relationships [19]. Pearson correlation was used
+to test the significance between two quantitative variables.
+A p-value level of less than 0.05 was taken as significant.
+3. RESULTS
+A total of 116 children with isolated growth hormone
+deficiency were included. The participants ranged in age
+from 7 to 17 years, with an average age of 13.01 ± 2.78
+years. In terms of gender distribution (following SAGER
+guidelines), there were 67 males (57.9%) and 49 females
+(42.1%), resulting in a male-to-female ratio of 1.37:1, as
+illustrated in Fig. (2).
+The  mean  chronological  age  of  male  children  was
+13.18 ± 2.03 years, while the means of the conventional
+radiographic and ultrasonographic bone ages were 12.52
+± 1.85 and 12.63 ± 1.50 years, respectively. There was no
+statistically  significant  difference  between  the  means  of
+chronological  age,  conventional  radiographic,  and  ultra-
+sonographic  bone  ages  (p=  0.087).  In  the  females,  the
+means  of  chronological  age,  conventional  radiographic,
+and ultrasonographic bone ages were 11.43 ± 2.91, 11.10
+± 2.05, and 10.75 ± 1.21, respectively. As in male pati-
+ents, there was no significant difference in the means of
+chronological  age,  conventional  radiographic,  and  ultra-
+sonographic  bone  ages  of  the  females  (p=  0.308),  as
+illustrated  in  Table  1.
+Fig. (2). Gender distribution within the study group.
+“Regarding growth hormone therapy, about two-thirds
+of the children were on treatment (76, 65.8%), while the
+remaining 40 (34.2%) did not receive treatment. Among
+children who had growth hormone therapy, there was no
+significant difference among the means of chronological
+age,  conventional  radiographic,  and  ultrasonographic
+bone ages (10.84 ± 2.98 vs 10.15 ± 2.03 and 10.81 ± 2.05,
+p= 0.243).
+
+4   The Open Neuroimaging Journal, 2025, Vol. 18
+Hameed et al.
+Table  1.  Comparison  between  chronological  age,  bone  age  obtained  from  conventional  radiographs,  and
+ultrasonography.
+Patients Gender
+Evaluation
+Bone Age
+Mean ± SD
+p-value*
+Male
+Chronologic
+13.18 ± 2.03
+0.087
+Radiographs
+12.52 ± 1.85
+Ultrasonography
+12.63 ± 1.50
+-
+Female
+Chronologic
+11.43 ± 2.91
+0.308
+Radiographs
+11.11 ± 2.05
+Ultrasonography
+10.75 ± 1.21
+Note: *Significant difference between more than two means using ANOVA test at 0.05 level.
+Table  2.  Comparison  between  chronological  age,  bone  age  obtained  from  conventional  radiographs,  and
+ultrasonography  according  to  growth  hormone  therapy.
+Growth Hormone Therapy
+Evaluation
+Bone Age (years)
+Mean ± SD
+p-value*
+NO
+Chronologic
+13.38 ± 2.20
+0.071
+Radiographs
+11.68 ± 2.17
+Ultrasonography
+11.73 ± 1.83
+-
+YES
+Chronologic
+10.84 ± 2.98
+0.243
+Radiographs
+10.15 ± 2.03
+Ultrasonography
+10.81 ± 2.05
+Note: *Significant difference between more than two means using ANOVA test at 0.05 level.
+Table 3. Correlations between chronological age, radiologic, and ultrasonographic bone ages.
+Gender
+Evaluation of Bone Age
+Radiography
+Ultrasonography
+r
+p-value
+r
+p-value
+Male
+Chronological Age
+0.864
+0.001
+0.837
+0.001
+Ultrasonography
+0.788
+0.001
+–
+–
+-
+Female
+Chronological Age
+0.836
+0.001
+0.753
+0.001
+Ultrasonography
+0.703
+0.001
+–
+–
+At  the  same  time,  the  means  of  chronological  age,
+conventional  radiographic,  and  ultrasonographic  bone
+ages were not significantly different in the children who
+didn not receive hormonal therapy (13.38 ± 2.20 vs. 11.68
+± 2.17 and 11.73 ± 1.83, p= 0.071), as illustrated in Table
+2.
+For the males, the Pearson correlation analysis showed
+a  significant  positive  correlation  between  chronological
+age  and  radiologic  bone  age  (r=  0.864,  p=  0.001)  and
+ultrasonic bone age (r= 0.837, p= 0.001). Further, there
+was a strong positive correlation between radiologic and
+ultrasonic  bone  age  (r=  0.788,  p=  0.001).  The  same
+findings  were  observed  among  female  children  where
+chronological  age  was  significantly  correlated  with
+radiologic bone age (r= 0.836, p= 0.001) and ultrasonic
+bone age (r= 0.753, p= 0.001), and a strong correlation
+was detected between radiologic and ultrasonic bone ages
+(r= 0.703, p= 0.001), as shown in Table 3.
+4. DISCUSSION
+This  study  compared  the  bone  age  estimated  by
+ultrasound to those estimated by conventional radiography
+in  a  sample  of  short-stature  Iraqi  children  with  growth
+hormone  deficiency  and  demonstrated  a  non-significant
+difference  between  the  means  of  bone  age  assessed  by
+ultrasound and conventional radiographic method regard-
+less  of  the  gender  of  the  children  and  growth  hormone
+treatment.  There  was  a  strong  correlation  between  the
+means  of  bone  age  assessed  by  ultrasound  and  conven-
+tional  radiography.  So,  ultrasound  may  be  considered  a
+valid  replacement  for  radiography  in  the  assessment  of
+bone age in children with short stature caused by growth
+hormone  deficiency,  as  those  children  receive  sequential
+bone  age  assessment  to  overcome  the  drawbacks  of
+radiography  [6,  20,  21].
+Bone age represents skeletal maturation in the pediatric
+age group, and it has a wide spectrum of implications in
+
+Accuracy of Ultrasound in Bone Age Estimation
+5
+pediatric  endocrinology,  like  estimation  of  expected  final
+adult  height  and  diagnosis  and  management  of  various
+pediatric health conditions, including children with growth
+hormone  deficiency  [22,  23].  Estimation  of  bone  age  in
+children with short stature from growth hormone deficiency
+is conductedinitially to confirm the underlying cause and in
+following up patients with hormonal replacement therapy
+[24].  Children  with  growth  hormone  therapy  had  annual
+bone age estimation, and with the use of the conventional
+radiographic method, this will place the child at risk of a
+cumulative dose of ionizing radiation [25].
+Multiple methods have been used in practice to assess
+bone age from wrist-hand X-rays, including the GP and TW
+methods, and each of these methods has its pros and cons
+[6]. The TW2 method used in the current study is more
+precise.  It  has  much  less  inter  and  intra-observer  vari-
+ability in bone age assessment but is more time-consuming
+than the GP method, and since it also depends on wrist-x
+ray  so  has  ionizing  radiation  risk  [16].  As  a  result,
+ultrasound  appears  to  be  a  more  attractive  method  for
+bone age estimation as all drawbacks of radiology can be
+overcome with ultrasound use. Additionally, it is of low-
+cost, is readily available, and is non-ionizing [26].
+Ultrasound  is  infrequently  used  for  bone  age
+estimation in routine practice due to the lack of training
+needed  for  its  estimation  and  the  limited  availability  of
+qualified  US  devices.  For  that,  radiography  is  more
+prevalent since it is validated and accessible [27]. More-
+over,  studies  addressing  US  accuracy  in  bone  age
+determination  remain  scarce.  Most  recent  research  is
+currently focusing on newer emerging technologies, such
+as three-dimensional US, which has improved diagnostic
+precision,  especially  when  combined  with  AI  technology
+[28].
+In  the  current  study,  there  were  non-significant
+differences in bone age estimated by ultrasound and con-
+ventional radiographs for both male and female patients
+with growth hormone deficiency (p-value = 0.087, 0.308),
+respectively.
+Traditional  radiology  methods  use  gender-specific
+adjustment  owing  to  different  maturation  rates  for
+different  genders,  especially  in  terms  of  puberty  [29].
+In  contrast,  US  scanning  of  bone  age  showed
+comparable accuracy regardless of gender. This advantage
+for the US can simplify bone age assessment and reduce
+the  dependence  on  individualized  calibration.  This  is
+valuable  for  pediatric  endocrinology,  where  reducing
+radiation  exposure  is  desired  [8].
+A  study  by  Pin  Lv  showed  good  accuracy  for  both
+males and females by US examination; however, there was
+a higher accuracy for females owing to the favorable effect
+of estrogen on bone growth [30, 31].
+The  estimation  of  bone  age  was  not  affected  by
+whether the patient started growth hormone therapy or
+not, as there were non-significant statistical differences in
+bone age estimated by conventional radiography and ultra-
+sound  between  patients  who  received  growth  hormone
+therapy and those who did not start the hormonal therapy
+for both male and female patients (p-value = 0.071,0.243),
+respectively.
+In  the  present  study,  the  bone  age  assessed  by
+ultrasound strongly correlated with that assessed by the
+TW2  method  based  on  wrist  x-rays  for  both  males  and
+females  with  r  =0.788  and  0.703,  respectively,  and  the
+correlation  was  statistically  significant  with  p-value
+=0.001 for both. This means that regardless of the gender
+of the child, ultrasound can be used to assess bone age in
+children with short stature. This disagrees with the result
+of the study by Khan et al. on 100 children, which did not
+recommend the use of ultrasound in bone age assessment,
+as  they  found  a  poor  correlation  between  bone  age
+assessed by ultrasound and the conventional radiographic
+method  [32].  This  difference  could  stem  from  multiple
+reasons: first, the demographic characteristics of children
+in each study were different. Second, in the present study,
+only  children  with  growth  hormone  deficiency  were
+included,  while  in  the  Khan  et  al.  study,  children  with
+short  stature,  irrespective  of  the  cause,  were  included.
+Recently,  artificial  intelligence  has  emerged  as  a
+promising tool in the estimation of bone age in children
+presented with short stature, offering enhanced accuracy,
+consistency,  and  efficiency  compared  to  traditional
+methods. AI algorithms, particularly those leveraging deep
+learning and convolutional neural networks, can analyze
+radiographic  images  to  provide  precise  bone  age
+assessments,  reducing  inter-observer  variability  and
+saving  time  for  pediatricians  [33-35].
+This study had multiple limitations: First, the limited
+number  of  participants  and  the  single  center  setting,
+which limited the generalizability of the results. Second,
+the  radiological  assessment  of  bone  age  was  performed
+using the TW2 method as this is still the main method for
+bone age assessment used by pediatric endocrinologists in
+Iraq compared to TW3, commonly used in more developed
+countries. This method had multiple drawbacks, including
+outdated reference data, limited scope, less precision, and
+being subjected to less updated research, which makes it
+less aligned with the most recent updated findings [7, 15,
+36, 37]. Third: the evaluation of bone age by ultrasound
+(US)  requires  the  patient's  presence  for  examination,
+followed by measuring the result and recording it on the
+skeletal maturity chart. In contrast, bone age assessment
+by  X-ray  is  faster,  easier,  and  does  not  require  the
+patient's presence. Additionally, the X-ray film can be kept
+for  comparison,  whereas  ultrasound  is  mainly  operator-
+dependent,  and  the  ultrasound  images  require  several
+steps to assess the age for comparison [24].”Despite these
+limitations,  this  study  represents  the  first  paper  that
+discusses the use of ultrasound for bone age estimation in
+children with growth hormone deficiency. It can lead to a
+large-scale multicentric study to confirm the results of the
+present  study.  In  addition,  it  highlights  the  need  to
+establish a bone age reference for Iraqi or at least Arabic
+children with the same ethnicity as a noticeable distinction
+amongst  populations  in  the  distribution  of  TW  standard
+maturity  scores  in  relation  to  chronological  age.  These
+variations may stem from ethnic diversity or from changes
+
+6   The Open Neuroimaging Journal, 2025, Vol. 18
+Hameed et al.
+in  biological  maturity  that  occurred  during  the  last
+century  due  to  external  influences,  including  lifestyle
+changes  and  socioeconomic  advancements  [38].
+CONCLUSION
+In
+ children
+ with
+ growth
+ hormone
+ deficiency,
+ultrasound estimation of bone age strongly correlates with
+hand-wrist x-ray based bone age estimation regardless of
+gender and hormonal therapy, which holds significance for
+overcoming  the  drawbacks  of  conventional  radiographic
+methods.  Based  on  the  current  findings,  the  use  of
+ultrasound  represents  a  promising  option  for  the  initial
+diagnosis and follow-up of children with isolated growth
+hormone deficiency to ensure effective management. As
+such,  patients  may  require  repeated  follow-up  to  assess
+the response to treatment, so frequent radiation exposure
+may be required.
+AUTHORS’ CONTRIBUTION
+M.M.H., S.K.A.: Data collection; Q.A.H.: Analysis and
+interpretation  of  results;  N.N.A.,  W.N.M.H.:  Draft
+manuscript. All authors reviewed the results and approved
+the final version of the manuscript.
+LIST OF ABBREVIATIONS
+IGHD
+=
+Isolated Growth Hormone Deficienc
+GP
+=
+Greulich and Pyle
+TW
+=
+Tanner-Whitehouse
+ETHICS
+ APPROVAL
+ AND
+ CONSENT
+ TO
+PARTICIPATE
+The study was approved by the ethics committee of the
+Al-Kindy  Teaching  Hospital  in  Baghdad,  Iraq,  ethical
+approval  number  is  (217)  on  27/5/2024.
+HUMAN AND ANIMAL RIGHTS
+All  human  research  procedures  followed  were  in
+accordance  with  the  ethical  standards  of  the  committee
+responsible for human experimentation (institutional and
+national),  and  with  the  Helsinki  Declaration  of  1975,  as
+revised in 2013.
+CONSENT FOR PUBLICATION
+Informed  consent  had  been  assigned  from  the
+children's  parents.
+STANDARDS OF REPORTING
+STROBE guidelines were followed
+AVAILABILITY OF DATA AND MATERIALS
+All  the  data  and  supporting  information  is  provided
+within the article.
+FOUNDING
+None.
+CONFLICT OF INTEREST
+The authors declare no conflict of interest, financial or
+otherwise.
+ACKNOWLEDGEMENTS
+Declared None.
+REFERENCES
+Perchard R, Murray PG, Clayton PE. Approach to the patient with
+[1]
+short  stature:  Genetic  testing.  J  Clin  Endocrinol  Metab  2023;
+108(4): 1007-17.
+http://dx.doi.org/10.1210/clinem/dgac637 PMID: 36355576
+Patel  R,  Bajpai  A.  Evaluation  of  short  stature  in  children  and
+[2]
+adolescents. Indian J Pediatr 2021; 88(12): 1196-202.
+http://dx.doi.org/10.1007/s12098-021-03880-9 PMID: 34398416
+Cheetham T, Davies JH. Investigation and management of short
+[3]
+stature. Arch Dis Child 2014; 99(8): 767-71.
+http://dx.doi.org/10.1136/archdischild-2013-304829
+ PMID:
+24599067
+Fatani TH. Diagnostic value of IGF-1 in growth hormone–deficient
+[4]
+children: Is a second growth hormone stimulation test necessary?
+J Endocr Soc 2023; 7(4): bvad018.
+http://dx.doi.org/10.1210/jendso/bvad018 PMID: 36846213
+Satoh M. Bone age: Assessment methods and clinical applications.
+[5]
+Clin Pediatr Endocrinol 2015; 24(4): 143-52.
+http://dx.doi.org/10.1297/cpe.24.143 PMID: 26568655
+Cavallo F, Mohn A, Chiarelli F, Giannini C. Evaluation of bone age
+[6]
+in children: A mini-review. Front Pediatr 2021; 9: 580314.
+http://dx.doi.org/10.3389/fped.2021.580314 PMID: 33777857
+Lynn  Ahmed  M,  Warner  JT.  TW2  and  TW3  bone  ages:  Time  to
+[7]
+change? Arch Dis Child 2007; 92(4): 371-2.
+http://dx.doi.org/10.1136/adc.2005.090134 PMID: 17376951
+Kowo-Nyakoko F, Gregson CL, Madanhire T, et al. Evaluation of
+[8]
+two methods of bone age assessment in peripubertal children in
+Zimbabwe. Bone 2023; 170: 116725.
+http://dx.doi.org/10.1016/j.bone.2023.116725 PMID: 36871897
+Zhu X, Zhang W. Advances of Noninvasive Imaging in Bone Age
+[9]
+Assessment. Chinese J Applied Clin Pediatr 2024; 39
+Štern  D,  Payer  C,  Lepetit  V,  Urschler  M.  Automated  age
+[10]
+estimation from hand mri volumes using deep learning. Medical
+Image Computing and Computer-Assisted Intervention – MICCAI
+2016. Springer 2016; p. 194.
+http://dx.doi.org/10.1007/978-3-319-46723-8_23
+Lee  KC,  Lee  KH,  Kang  CH,  et  al.  Clinical  validation  of  a  deep
+[11]
+learning-based  hybrid  (Greulich-Pyle  and  Modified  Tanner-
+Whitehouse) method for bone age assessment. Korean J Radiol
+2021; 22(12): 2017-25.
+http://dx.doi.org/10.3348/kjr.2020.1468 PMID: 34668353
+Nicholas JL, Douglas KE, Waters W, et al. US evaluation of bone
+[12]
+age in rural ecuadorian children: Association with anthropometry
+and nutrition. Radiology 2020; 296(1): 161-9.
+http://dx.doi.org/10.1148/radiol.2020190606 PMID: 32343211
+Boitsios G, Saliba T, Aparisi Gómez MP, Simoni P. Does ethnicity
+[13]
+influence  bone  health  index  in  children?  A  pilot  study.  Pediatr
+Radiol 2024; 54(2): 316-23.
+http://dx.doi.org/10.1007/s00247-023-05844-x PMID: 38227019
+Wan  J,  Zhao  Y,  Feng  Q,  Lv  P,  Hong  K,  Zhang  C.  Statistical
+[14]
+confirmation  of  a  method  of  US  determination  of  bone  age.
+Radiology  2021;  300(1):  176-83.
+http://dx.doi.org/10.1148/radiol.2021204353 PMID: 34003051
+Faulhaber MES, Rodríguez RMR, del Ángel Escalona A. Bone age
+[15]
+estimation by TW2 and TW3 methods in indigenous children from
+Oaxaca, Mexico. Rev Argent Antropol Biol 2020; 22
+http://dx.doi.org/10.24215/18536387e015
+Bull  RK,  Edwards  PD,  Kemp  PM,  Fry  S,  Hughes  IA.  Bone  age
+[16]
+assessment: A large scale comparison of the Greulich and Pyle,
+and Tanner and Whitehouse (TW2) methods. Arch Dis Child 1999;
+81(2): 172-3.
+http://dx.doi.org/10.1136/adc.81.2.172 PMID: 10490531
+Pourhoseingholi  MA,  Vahedi  M,  Rahimzadeh  M.  Sample  size
+[17]
+calculation in medical studies. Gastroenterol Hepatol Bed Bench
+2013; 6(1): 14-7.
+
+Accuracy of Ultrasound in Bone Age Estimation
+7
+PMID: 24834239
+Roy R, Hazra A, Ghosh S. An observational study on response to
+[18]
+growth hormone therapy in indian patients of short stature with
+special
+ emphasis
+ on
+ biochemical
+ parameters
+ and
+ bone
+biomarkers.  Indian  J  Endocrinol  Metab  2023;  27(3):  260-9.
+http://dx.doi.org/10.4103/ijem.ijem_303_22 PMID: 37583404
+Ahmed SA, Abdul-Qader SK, Shakir NA. The efficacy of bedside
+[19]
+chest  ultrasound  in  the  detection  of  traumatic  Pneumothorax.
+Open Neuroimaging J 2024; 17(1): e18744400300817.
+http://dx.doi.org/10.2174/0118744400300817240704095404
+Wan J, Zhao Y, Feng Q, Zhang C. Summation of ossification ratios
+[20]
+of radius, ulna and femur: A new parameter to evaluate bone age
+by ultrasound. Ultrasound Med Biol 2020; 46(7): 1761-8.
+http://dx.doi.org/10.1016/j.ultrasmedbio.2020.03.021
+ PMID:
+32402669
+Nori  W,  Abdulqader  SK,  Akram  NN,  Al-Ani  RM,  Hassan  QA,
+[21]
+Pantazi  AC.  Unusual  presentation  of  osteoid  osteoma  with
+exacerbating  pain  during  menses.  Sultan  Qaboos  Univ  Med  J
+2024.
+http://dx.doi.org/10.18295/squmj.10.2024.067
+Dillman  JR,  Ayyala  RS.  Point-of-care  bone  age  evaluation:  The
+[22]
+increasing role of us in resource-limited populations. Radiology
+2020; 296(1): 170-1.
+http://dx.doi.org/10.1148/radiol.2020201168 PMID: 32347783
+Creo AL, Schwenk WF II. Bone age: A handy tool for pediatric
+[23]
+providers. Pediatrics 2017; 140(6): e20171486.
+http://dx.doi.org/10.1542/peds.2017-1486 PMID: 29141916
+Prokop-Piotrkowska  M,  Marszałek-Dziuba  K,  Moszczyńska  E,
+[24]
+Szalecki M, Jurkiewicz E. Traditional and new methods of bone
+age  assessment:  An  overview.  JCRPE  J  Clin  Res  Pediatric
+Endocrinol  2021;  13(3):  251-62.
+Spadoni GL, Cianfarani S. Bone age assessment in the workup of
+[25]
+children  with  endocrine  disorders.  Horm  Res  Paediatr  2010;
+73(1):  2-5.
+http://dx.doi.org/10.1159/000271910 PMID: 20190534
+Bilgili Y, Hizel S, Kara SA, Sanli C, Erdal HH, Altinok D. Accuracy
+[26]
+of skeletal age assessment in children from birth to 6 years of age
+with  the  ultrasonographic  version  of  the  Greulich-Pyle  atlas.  J
+Ultrasound Med 2003; 22(7): 683-90.
+http://dx.doi.org/10.7863/jum.2003.22.7.683 PMID: 12862266
+Akram  NN,  Jaafar  MM,  Abdulqader  SK,  Nori  W,  Kassim  MAK,
+[27]
+Pantazi AC. Clinical characteristics and therapeutic management
+of osteogenesis imperfecta in Iraqi Children. Al-Rafidain J Med Sci
+2023; 5: S189-5194.
+http://dx.doi.org/10.54133/ajms.v5i1S.416
+Chen  L,  Zeng  B,  Shen  J,  et  al.  Bone  age  assessment  based  on
+[28]
+three-dimensional ultrasound and artificial intelligence compared
+with  paediatrician-read  radiographic  bone  age:  Protocol  for  a
+prospective, diagnostic accuracy study. BMJ Open 2024; 14(2):
+e079969.
+http://dx.doi.org/10.1136/bmjopen-2023-079969 PMID: 38401893
+Giacobbe  G,  Granata  V,  Trovato  P,  et  al.  Gender  medicine  in
+[29]
+clinical radiology practice. J Pers Med 2023; 13(2): 223.
+http://dx.doi.org/10.3390/jpm13020223 PMID: 36836457
+Lv  P,  Zhang  C.  Tanner–Whitehouse  skeletal  maturity  score
+[30]
+derived from ultrasound images to evaluate bone age. Eur Radiol
+2022; 33(4): 2399-406.
+http://dx.doi.org/10.1007/s00330-022-09285-2 PMID: 36462047
+Abdulqader SK, an Bakr GM, Ahmed SA, Hassan QA, Al-Kinani M.
+[31]
+Gender distribution of coronary artery calcium score and degree
+of  stenosis  assessed  by  computed  tomography  angiography  in
+Iraqi  patients  with  chest  pain.  Al-Rafidain  J  Med  Sci  2024;  7:
+78-85.
+http://dx.doi.org/10.54133/ajms.v7i1.1032
+Khan  KM,  Miller  BS,  Hoggard  E,  Somani  A,  Sarafoglou  K.
+[32]
+Application  of  ultrasound  for  bone  age  estimation  in  clinical
+practice. J Pediatr 2009; 154(2): 243-7.
+http://dx.doi.org/10.1016/j.jpeds.2008.08.018 PMID: 18823906
+Alhussen A, Anul Haq M, Ahmad Khan A, Mahendran RK, Kadry S.
+[33]
+XAI-RACapsNet: Relevance aware capsule network-based breast
+cancer detection using mammography images via explainability O-
+net ROI segmentation. Expert Syst Appl 2025; 261: 125461.
+http://dx.doi.org/10.1016/j.eswa.2024.125461
+Khan AA, Mahendran RK, Perumal K, Faheem M. Dual-3DM 
+3 AD:
+[34]
+Mixed transformer based semantic segmentation and triplet pre-
+processing for early multi-class alzheimer’s diagnosis. IEEE Trans
+Neural Syst Rehabil Eng 2024; 32: 696-707.
+http://dx.doi.org/10.1109/TNSRE.2024.3357723 PMID: 38261494
+Khan  AA,  Madendran  RK,  Thirunavukkarasu  U,  Faheem  M.
+[35]
+D
+2PAM : Epileptic seizures prediction using adversarial deep dual
+patch attention mechanism. CAAI Trans Intell Technol 2023; 8(3):
+755-69.
+http://dx.doi.org/10.1049/cit2.12261
+Bertaina  C,  Stasiowska  B,  Benso  A,  Vannelli  S.  Is  TW3  height
+[36]
+prediction more accurate than TW2? Preliminary data. Horm Res
+Paediatr 2007; 67(5): 220-3.
+http://dx.doi.org/10.1159/000097439 PMID: 17135758
+Ortega AI, Haiter-Neto F, Ambrosano GMB, Bóscolo FN, Almeida
+[37]
+SM,  Casanova  MS.  Comparison  of  TW2  and  TW3  skeletal  age
+differences in a Brazilian population. J Appl Oral Sci 2006; 14(2):
+142-6.
+http://dx.doi.org/10.1590/S1678-77572006000200014
+ PMID:
+19089046
+Vignolo M, Naselli A, Magliano P, Di Battista E, Aicardi M, Aicardi
+[38]
+G. Use of the new US90 standards for TW-RUS skeletal maturity
+scores in youths from the Italian population. Horm Res Paediatr
+1999; 51(4): 168-72.
+http://dx.doi.org/10.1159/000023352 PMID: 10474017

@@ -94,7 +94,8 @@ const SurveySummary=(()=>{
     const track=document.createElement('span');track.className='survey-scale-track';track.setAttribute('role','meter');track.setAttribute('aria-label',row.label);track.setAttribute('aria-valuemin',String(row.scale.min));track.setAttribute('aria-valuemax',String(row.scale.max));track.setAttribute('aria-valuenow',String(row.scale.value));track.setAttribute('aria-valuetext',row.scale.value+'점 ('+row.scale.min+'~'+row.scale.max+'점 척도)');
     const fill=document.createElement('span');fill.className='survey-scale-fill';fill.style.width=(row.scale.value/row.scale.max*100)+'%';track.append(fill);
     const bounds=document.createElement('span');bounds.className='survey-scale-bounds';bounds.textContent=row.scale.min+'–'+row.scale.max+'점 척도';
-    value.append(number,track,bounds);
+    value.append(number,track);
+    if(!['currentPainScale','maxPainScale'].includes(row.key))value.append(bounds);
    }
    pair.append(label,value);dl.append(pair);}
   return dl;

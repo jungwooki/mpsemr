@@ -53,7 +53,7 @@ function mountClinicalToolbar(view){
  let bar=view.querySelector('.clinical-unified-toolbar');
  if(!bar){
   bar=document.createElement('header');bar.className='clinical-unified-toolbar no-print';
-  bar.innerHTML='<strong>MPS EMR <span>환자 · 진료기록</span></strong><div><button type="button" data-clinical-action="chart">차트번호 수정</button><button type="button" data-clinical-action="list">환자 목록</button><button type="button" data-clinical-action="print">인쇄 / PDF</button><button type="button" data-clinical-action="home">메인화면</button><button type="button" data-clinical-action="audit">활동 이력</button><button type="button" data-clinical-action="logout">로그아웃</button></div>';
+  bar.innerHTML='<strong>MPS EMR <span>MPS차트</span></strong><div><button type="button" data-clinical-action="chart">차트번호 수정</button><button type="button" data-clinical-action="list">환자 목록</button><button type="button" data-clinical-action="print">인쇄 / PDF</button><button type="button" data-clinical-action="home">메인화면</button><button type="button" data-clinical-action="audit">활동 이력</button><button type="button" data-clinical-action="logout">로그아웃</button></div>';
   const existing=view.querySelector('.report-toolbar')||view.firstElementChild;existing.classList.add('clinical-legacy-toolbar');existing.before(bar);
   bar.querySelector('[data-clinical-action=chart]').onclick=async()=>{if(await emrCanNavigate())editChartNumber();};
   bar.querySelector('[data-clinical-action=list]').onclick=()=>clinicalSelectPatient(window._currentPatientIdx);
