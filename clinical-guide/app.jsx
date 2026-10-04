@@ -1,0 +1,2 @@
+const {useState,useEffect,useRef}=React;
+const Icon=({name,size=20,className=''})=>{const ref=useRef(null);useEffect(()=>{if(ref.current&&window.lucide){ref.current.innerHTML='';const node=document.createElement('i');node.dataset.lucide=name;ref.current.append(node);lucide.createIcons({root:ref.current});}},[name]);return <span ref={ref} className={className} style={{display:'inline-flex',width:size,height:size,flexShrink:0}} aria-hidden="true"/>;};

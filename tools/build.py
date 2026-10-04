@@ -52,6 +52,10 @@ def render_outputs():
         keys = [entry['key'] for entry in mental[0]]
         outputs['Code.gs'] = '// Generated from src/data/mental/catalog.json.\nvar MENTAL_SPORT_KEYS = ' + json.dumps(keys) + ';\n' + outputs['Code.gs']
         outputs.update(review_documents(*mental))
+    guide_head = read_source("clinical-guide/head.html")
+    guide_code = "\n".join(read_source("clinical-guide/" + name) for name in ["app.jsx", "content.jsx", "view.jsx"])
+    guide_code = guide_code.replace("__GUIDE_DISCLAIMER__", "<div dangerouslySetInnerHTML={{__html:" + json.dumps(read_source("src/shared/guide-disclaimer.html"), ensure_ascii=False).replace("<", "\\u003c") + "}} />")
+    outputs["clinical-guide/index.html"] = guide_head + '<script type="text/babel">\n' + guide_code + "\n</script>\n</body>\n</html>\n"
     return outputs
 
 

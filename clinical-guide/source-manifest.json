@@ -1,0 +1,13 @@
+{
+  "source": "mps_basecamp/resources/rnd/index.html",
+  "sha256": "f25d48eeebd19c1becb457e1e3e4a79182bbac0e282dfe4db7ad9566d8891e00",
+  "preservedDataSha256": "733026be35decb5345eab7fc6a1b53d35aa052a526854ef32e5873223bc6796e",
+  "sections": {
+    "M": 4,
+    "P": 7,
+    "S": 3
+  },
+  "includes": "All original guide content and precautions; login and mobile navigation replaced.",
+  "currentContentSha256": "15b925ee364749a4b25fedd958f52b1febee3d3814e500c152a479b847f94aca",
+  "contentRevision": "2026-10-05: user-authorized moderation of categorical risk and treatment language; threshold values retained; original source unchanged."
+}

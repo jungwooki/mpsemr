@@ -18,6 +18,11 @@ class BuildTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name).resolve()
         (self.root / 'src').mkdir()
+        (self.root / 'src/shared').mkdir()
+        self.write('src/shared/guide-disclaimer.html', '<aside>Notice</aside>')
+        (self.root / 'clinical-guide').mkdir()
+        for name in ['head.html', 'app.jsx', 'content.jsx', 'view.jsx']:
+            self.write('clinical-guide/' + name, '')
         self.write('modules.json', json.dumps({'scripts': ['app.js'], 'server': ['server.gs']}))
         self.write('src/index.template.html', '{{ include view.html }}<script>{{ scripts }}</script>')
         self.write('view.html', '<main>Before</main>')
